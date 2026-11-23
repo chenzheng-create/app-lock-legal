@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>应用锁 AppLock · 隐私政策 / Privacy Policy</title>
+<meta name="description" content="「应用锁」隐私政策，说明个人信息的收集、使用、保护、共享与您的权利。">
+<meta name="theme-color" content="#2f6feb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='7' fill='%232f6feb'/%3E%3Crect x='8' y='12' width='12' height='9' rx='2' fill='%23fff'/%3E%3Cpath d='M10.5 12v-2.2a3.5 3.5 0 017 0V12' stroke='%23fff' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --text:#1c1f23; --muted:#5d646e;
+  --line:#e3e6ea; --accent:#2f6feb; --accent-soft:#eaf1fe;
+  --ph-bg:#fff7e6; --ph-line:#e0a32e; --ph-text:#8a5b00;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14161a;--card:#1c1f24;--text:#e8eaed;--muted:#a2a9b4;--line:#2c3138;
+        --accent:#6c9bff;--accent-soft:#1f2a3d;--ph-bg:#33280f;--ph-line:#a97d1f;--ph-text:#e8c477;
+        --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);}
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.9;font-size:16px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
+  header{background:rgba(246,247,249,.86);-webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px)}
+  @media (prefers-color-scheme:dark){header{background:rgba(20,22,26,.86)}}
+}
+.hd{max-width:860px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.2px;text-decoration:none;color:inherit}
+.brand svg{flex:none;border-radius:7px}
+.brand small{font-weight:500;color:var(--muted);font-size:12px}
+.spacer{flex:1 1 auto}
+.seg{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:var(--shadow)}
+.seg a{padding:5px 12px;border-radius:7px;font-size:13.5px;color:var(--muted);text-decoration:none;white-space:nowrap;font-weight:500}
+.seg a.on{background:var(--accent);color:#fff}
+.seg a:not(.on):hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:860px;margin:0 auto;padding:28px 20px 0}
+.doc{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:44px 48px 52px;box-shadow:var(--shadow)}
+.doc.on{display:block}
+  [id^="zh-"],[id^="en-"]{scroll-margin-top:84px}
+.doc h1{font-size:25px;line-height:1.5;margin:0 0 26px;padding-bottom:18px;border-bottom:1px solid var(--line);letter-spacing:.2px}
+.doc h2{font-size:17.5px;margin:34px 0 10px;padding-left:12px;border-left:3px solid var(--accent);line-height:1.6}
+.doc h2:first-of-type{margin-top:0}
+.doc h3{font-size:15.5px;margin:20px 0 8px;line-height:1.7;color:var(--text)}
+.doc p{margin:0 0 12px;color:var(--text);text-align:justify}
+.doc ol,.doc ul{padding-left:22px}
+.doc li{margin:0 0 6px}
+.doc table{width:100%;border-collapse:collapse;margin:12px 0 18px;font-size:14px;line-height:1.7}
+.doc th,.doc td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.doc th{background:var(--accent-soft);font-weight:600}
+.toc{background:var(--accent-soft);border:1px solid var(--line);border-radius:10px;padding:14px 18px 12px;margin:0 0 30px}
+.toc-t{margin:0 0 6px;font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
+.toc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:26px}
+.toc li{font-size:13.5px;color:var(--muted);line-height:1.85;break-inside:avoid}
+.toc a{color:inherit;text-decoration:none}
+.toc a:hover{color:var(--accent)}
+.ph{background:var(--ph-bg);border-bottom:1px dashed var(--ph-line);color:var(--ph-text);
+  padding:1px 5px;border-radius:4px;font-weight:600;white-space:nowrap}
+footer{max-width:860px;margin:0 auto;padding:26px 20px 40px;color:var(--muted);font-size:12.5px;
+  border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+footer a{color:inherit}
+@media (max-width:640px){
+  .doc{padding:26px 20px 34px;border-radius:12px}
+  .doc h1{font-size:20px}.doc h2{font-size:16px}
+  .toc ul{columns:1}
+  .hd{padding:10px 14px;row-gap:8px}
+  .spacer{display:none}
+  .seg{flex:1 1 46%}
+  .seg a{flex:1 1 auto;text-align:center;padding:6px 4px;font-size:13px}
+}
+@media print{
+  header,footer,.toc{display:none!important}
+  body{background:#fff;font-size:11.5pt;line-height:1.75}
+  .doc{display:none;border:0;box-shadow:none;padding:0}
+  .doc.on{display:block}
+  [id^="zh-"],[id^="en-"]{scroll-margin-top:84px}
+  .doc h2{page-break-after:avoid}
+  .doc p{page-break-inside:avoid}
+  .doc table{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <a class="brand" href="/"><svg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'><rect width='28' height='28' rx='7' fill='#2f6feb'/><rect x='8' y='12' width='12' height='9' rx='2' fill='#fff'/><path d='M10.5 12v-2.2a3.5 3.5 0 017 0V12' stroke='#fff' stroke-width='1.8' fill='none' stroke-linecap='round'/></svg><span>应用锁 <small>AppLock</small></span></a>
+    <div class="spacer"></div>
+    <nav class="seg" id="langSeg" aria-label="语言 / Language">
+      <a href="#zh" data-lang="zh">中文</a>
+      <a href="#en" data-lang="en">English</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<!-- ======================= 中文 ======================= -->
+<section class="doc" id="doc-zh" data-doc="zh" lang="zh-CN">
+<h1>「应用锁」隐私政策</h1>
+<p>更新日期：2026年11月20日。开发者：chenzhengsoft；联系邮箱：<a href="mailto:chenzhengsoft@outlook.com">chenzhengsoft@outlook.com</a>。</p>
+
+<nav class="toc" aria-label="目录">
+  <p class="toc-t">目录 / Contents</p>
+  <ul>
+    <li><a href="#zh-1">1. 应用与账号</a></li>
+    <li><a href="#zh-2">2. 保存在设备上的内容与权限</a></li>
+    <li><a href="#zh-3">3. 我们收集与使用的个人信息</a></li>
+    <li><a href="#zh-4">4. Cookie 与同类技术</a></li>
+    <li><a href="#zh-5">5. 信息的存储与保护</a></li>
+    <li><a href="#zh-6">6. 共享、转让与公开披露</a></li>
+    <li><a href="#zh-7">7. 第三方服务</a></li>
+    <li><a href="#zh-8">8. 您的权利</a></li>
+    <li><a href="#zh-9">9. 未成年人个人信息</a></li>
+    <li><a href="#zh-10">10. 政策更新</a></li>
+    <li><a href="#zh-11">11. 如何联系我们</a></li>
+    <li><a href="#zh-annex">附件一：权限申请与使用说明</a></li>
+  </ul>
+</nav>
+
+<h2 id="zh-1">1. 应用与账号</h2>
+<p>「应用锁」是一款提供应用上锁、应用隐藏与文件加密隐藏功能的软件，其设计原则是<span class="ph">数据不出机</span>：全部业务逻辑在本机完成，数据保存在您设备的应用沙盒与系统加密存储区中。</p>
+<p>「应用锁」不设账号体系，也不要求您填写手机号、邮箱等身份信息。商品、购买、恢复与订阅由 Apple 与 App Store 管理，我们不会获得您的 Apple 账户密码、银行卡号或完整付款凭证。</p>
+<p>当您使用某些功能时，我们会在获得您同意后访问必要的系统权限。这些权限用于特定功能，拒绝授权只会使该功能无法使用，不影响您正常使用「应用锁」的其他功能。</p>
+
+<h2 id="zh-2">2. 保存在设备上的内容与权限</h2>
+<p>您的应用锁定配置、独立密码与密码哈希、加密后的文件、入侵拍摄影像以及功能开关状态，保存在设备本地的应用私有区域内。这些内容不会上传至我们的服务器，我们也没有设置自有个人信息服务器。</p>
+<p>「应用锁」申请或使用的系统权限如下，权限类型与用途会随产品功能升级而调整，我们会及时更新本列表：</p>
+<table>
+<thead><tr><th>系统权限</th><th>使用场景与目的</th><th>拒绝提供的后果</th></tr></thead>
+<tbody>
+<tr><td>屏幕使用时间 / 家庭控制（Screen Time / Family Controls）</td><td>用于应用上锁、应用隐藏与防翻看功能，在您指定的时机限制或隐藏目标应用。该权限由 iOS 系统统一管理，应用无法读取其他应用中的内容、账号或数据，也不会向服务器上报被管理应用的清单。</td><td>无法使用应用上锁、应用隐藏与防翻看功能，不影响文件加密隐藏等其他功能。</td></tr>
+<tr><td>照片库（读取您选择的照片与视频）</td><td>用于文件加密隐藏功能，将您主动选择的照片与视频加密保存至应用私有区域；导入完成后按默认设计删除系统相册中的原文件（可从系统「照片」App 的「最近删除」中恢复）。</td><td>无法使用文件加密隐藏功能，不影响其他功能。</td></tr>
+<tr><td>相机</td><td>用于入侵拍摄功能，在检测到未经授权的拍摄尝试时记录影像并向您展示警示信息。所拍摄图片仅保存在本机。</td><td>无法使用入侵拍摄功能，不影响其他功能。</td></tr>
+<tr><td>面部识别（Face ID）</td><td>用于在您查看加密内容、修改配置或解锁时验证使用者身份。验证由 iOS 系统完成，应用不获取也不存储您的面部数据。</td><td>无法使用 Face ID 解锁功能，但仍可使用独立密码解锁。</td></tr>
+<tr><td>添加到照片库（Photo Library Additions）</td><td>仅在您主动选择将处理结果写回系统相册时使用。</td><td>无法将结果保存回系统相册，不影响其他功能。</td></tr>
+</tbody>
+</table>
+<p>您可在系统设置中随时管理上述权限。除法律法规另有规定外，拒绝提供相关信息仅会使相应功能无法使用。</p>
+
+<h2 id="zh-3">3. 我们收集与使用的个人信息</h2>
+<p>我们收集的信息用于：①保障产品的基础正常运行；②向您提供各项功能和服务；③优化、改善产品和服务；④保障用户的使用安全；⑤遵循法律法规与国家标准的规定。</p>
+<h3>3.1 为保障软件与服务的正常运行</h3>
+<p>应用会在您的设备本地读取必要的系统信息，例如硬件型号、操作系统版本号、软件版本号、网络接入方式及类型，用于本地功能判断与故障排查，以明确定位崩溃位置与异常行为。这些信息不会上传至我们的服务器。</p>
+<h3>3.2 您主动提供的信息</h3>
+<p>当您主动通过电子邮件向我们反馈意见或咨询问题时，我们会收到您邮件中的邮箱地址、反馈内容及您主动填写的联系方式，用于满足您的要求、提供相关产品或服务或实现反欺诈目的。请不要在反馈中填写密码或完整付款凭证。</p>
+<h3>3.3 收集与使用目的变更的处理</h3>
+<p>随着业务发展，「应用锁」的功能与服务可能调整变化。原则上，当新功能或服务与旧功能等场景相关时，收集与使用的个人信息将与原处理目的具有直接或合理关联；在与原目的无直接或合理关联的场景下，我们会再次进行告知并征得您的同意。</p>
+<h3>3.4 依法豁免征得同意的情形</h3>
+<p>根据法律法规和/或相关国家标准，在下列情形中收集和使用您的个人信息无需征得您的授权同意：</p>
+<ul>
+<li>与国家安全、国防安全直接相关的；</li>
+<li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
+<li>与犯罪侦查、起诉、审判和判决执行等直接相关的；</li>
+<li>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</li>
+<li>所收集的您的信息是您自行向社会公众公开的；</li>
+<li>从合法公开披露的信息中收集的您的信息，如合法的新闻报道、政府信息公开等渠道；</li>
+<li>根据您的要求签订和履行合同所必需的；</li>
+<li>用于维护软件及相关服务的安全稳定运行所必需的，例如发现、处置软件及相关服务的故障；</li>
+<li>法律法规规定的其他情形。</li>
+</ul>
+<h3>3.5 非个人信息的收集和使用</h3>
+<p>我们在必要的情况下收集无法与特定个体直接建立联系的数据，例如应用的本地运行日志、崩溃日志与功能使用统计。此类信息仅保存在您的设备本地，用于诊断性能问题与改进产品体验，不会与您的身份信息建立关联，也不会被用于广告投放。如果我们将非个人信息与个人信息结合使用，则在结合使用期间，此类信息将被视为个人信息。</p>
+
+<h2 id="zh-4">4. Cookie 与同类技术</h2>
+<p>Cookie 和同类技术是互联网中的通用常用技术。「应用锁」是运行在 iOS 设备上的本地应用，不运行于浏览器环境，因此不使用 Cookie 或同类技术。应用仅使用 iOS 系统的偏好设置（UserDefaults）在本机保存少量功能开关状态，例如您是否已阅读本隐私政策。该类数据不包含任何身份信息，也不会离开您的设备。</p>
+
+<h2 id="zh-5">5. 信息的存储与保护</h2>
+<h3>5.1 存储地点</h3>
+<p>我们按照法律法规的规定，将境内收集的用户个人信息存储于中华人民共和国境内。「应用锁」的全部业务数据（包括加密后的文件、应用锁定配置、入侵拍摄影像、密码哈希与密钥材料）均存储于您设备本地的应用沙盒及系统加密存储区中；我们不设置自有的个人信息服务器，不在服务器端存储您的任何个人信息内容。目前我们不会将信息传输至境外；如果未来需要向境外传输，我们将遵循相关国家规定或征求您的同意。</p>
+<h3>5.2 存储期限</h3>
+<p>我们仅为实现目的所必需的时间保留您的个人信息，例如您反馈意见时填写的邮箱信息。由于本地数据随应用存储于您的设备上，您卸载应用时相关数据即随之删除。</p>
+<h3>5.3 安全措施</h3>
+<p>我们非常重视您个人信息的安全，将努力采取合理的安全措施（包括技术方面和管理方面）保护您的个人信息，防止其被不当使用或未经授权访问、公开披露、使用、修改、损坏、丢失或泄漏。具体包括：</p>
+<ul>
+<li>安全设计以「数据不出机」为原则。加密后的文件与密钥材料保存在 iOS 系统的受保护存储区，并使用 iOS 数据保护机制（文件加密属性与钥匙串 Keychain）加以保护；查看或恢复内容需通过 Face ID / Touch ID 或独立密码校验。</li>
+<li>应用内不接入任何第三方 SDK、广告平台或统计分析服务，从源头降低了数据被第三方获取的可能性。</li>
+<li>我们制定应急处理预案，一旦发生用户信息安全事件，将立即启动应急预案，按法律法规要求及时告知您事件基本情况、影响范围、已采取与将采取的处置措施、自助防范建议及补救措施，并按监管要求上报处置情况。</li>
+</ul>
+<p>请您理解，由于技术的限制以及可能存在的各种恶意手段，在互联网行业即便竭尽所能加强安全措施，也无法始终保证信息百分之百的安全。我们强烈建议您采取积极措施保护个人信息安全，包括但不限于不将自己的密码等个人信息透露给他人。同时请注意，本政策提供的保护措施仅适用于「应用锁」软件及相关服务；一旦您离开「应用锁」，浏览或使用其他网站、服务及内容资源，我们没有能力及义务保护您在其他软件、网站提交的任何个人信息。</p>
+
+<h2 id="zh-6">6. 共享、转让与公开披露</h2>
+<h3>6.1 共享</h3>
+<p>我们不会向其他任何公司、组织和个人分享您的个人信息，但以下情况除外：</p>
+<ul>
+<li>经您明确授权同意，我们只与第三方共享实现目的所必要的信息。若第三方需超出前述授权范围使用个人信息，将再次征求您的同意。</li>
+<li>我们对与之共享您个人信息的公司、组织和个人签署严格的保密协议，并对其数据安全能力与环境进行评估，要求其以不低于本隐私政策要求的保密和安全措施处理相关信息。</li>
+</ul>
+<p>「应用锁」的隐私数据全部存储于您的设备本地，不存在向外部共享的技术路径。除法律法规另有规定外，我们不向任何第三方提供您的个人信息。</p>
+<h3>6.2 转让</h3>
+<p>我们不会将您的个人信息转让给任何公司、组织和个人。唯一可能涉及您主动提供信息的情形是您通过电子邮件向我们发送的反馈或咨询内容，该内容经电子邮件通道发送至我们的邮箱，用于处理您的请求。如涉及合并、收购或破产清算而需要转让个人信息时，我们会要求新的持有者继续受本隐私政策约束，否则将要求其重新向您征求授权同意。</p>
+<h3>6.3 公开披露</h3>
+<p>我们仅会在以下情况下公开披露您的个人信息：获得您明确同意后；基于法律、法律程序、诉讼或政府主管部门强制性要求；以及在必须公开披露时，我们会事先告知您公开披露的目的与信息类型，并在征得您的明确同意后进行披露。</p>
+
+<h2 id="zh-7">7. 第三方服务</h2>
+<p>「应用锁」的 App 本身不接入任何第三方 SDK。以下第三方仅在您使用相关服务或访问官网时介入，其数据处理适用各自的政策：</p>
+<ul>
+<li>Apple / App Store：商品、购买、恢复和订阅管理，适用 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>。</li>
+<li>GitHub Pages：托管官网、政策、加密配置和部分素材，访问时可能产生服务方的网络访问日志，适用 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隐私声明</a>。</li>
+</ul>
+<p>第三方自行处理的数据及保存安排以其政策为准。我们不会将您的个人信息或本地业务数据出售给数据经纪商。</p>
+
+<h2 id="zh-8">8. 您的权利</h2>
+<h3>8.1 撤回授权同意</h3>
+<p>您可以随时在系统设置中更改对「应用锁」的授权同意。当您收回同意后，我们将不再处理相应的个人信息；但收回同意的决定不影响此前基于您的授权而开展的个人信息处理。</p>
+<h3>8.2 删除</h3>
+<p>您可以在「应用锁」中删除您的文件信息和其他数据。卸载 iOS 设备上的「应用锁」App 即会连同全部本地数据一并移除；若您的文件已从系统相册删除，也可通过系统「照片」App 的「最近删除」进行恢复。</p>
+<h3>8.3 更正</h3>
+<p>您可以在应用内修改应用锁定配置、修改独立密码，或删除已加密的文件与相关记录。</p>
+<h3>8.4 访问隐私政策</h3>
+<p>您可以在应用内进入「设置」-「隐私政策」查看本隐私政策的全部内容。</p>
+<h3>8.5 停止运营时的告知</h3>
+<p>如我们停止运营，将及时停止收集您个人信息的活动，以逐一送达或公告的形式通知您，并对所持有的您的个人信息进行删除或匿名化处理。</p>
+
+<h2 id="zh-9">9. 未成年人个人信息</h2>
+<p>我们非常重视对未成年人个人信息的保护。根据相关法律法规的规定，若您是 18 周岁以下的未成年人，在使用「应用锁」服务前，应事先取得家长或法定监护人的书面同意。</p>
+<p>我们根据国家相关法律法规保护未成年人的个人信息，只会在法律允许、父母或其他监护人明确同意或保护未成年人所必要的情况下收集、使用、共享或披露未成年人的个人信息；如果我们发现在未事先获得可证实的父母同意的情况下收集了未成年人的个人信息，则会设法尽快删除相关信息。</p>
+
+<h2 id="zh-10">10. 政策更新</h2>
+<p>我们可能会适时对本隐私政策进行修订。当条款发生变更时，我们会在应用版本更新时以提示的形式向您展示变更后的隐私政策。请您注意，只有在您确认后，我们才会按照更新后的隐私政策收集、使用、存储您的个人信息。</p>
+
+<h2 id="zh-11">11. 如何联系我们</h2>
+<p>当您有任何疑问、投诉、建议，或涉及未成年人个人信息等问题时，请通过反馈邮箱 <a href="mailto:chenzhengsoft@outlook.com">chenzhengsoft@outlook.com</a> 与我们联系。我们将尽快审核所涉问题，并在验证您的用户身份后的十五个工作日内予以回复。</p>
+<p>本政策版权归开发者所有，开发者保留一切解释和修改的权利。</p>
+
+<h2 id="zh-annex">附件一：「应用锁」权限申请与使用情况说明</h2>
+<p>1. 为保障「应用锁」能实现与安全稳定运行，我们将根据实际业务场景申请或使用操作系统的相关权限。</p>
+<p>2. 为保障您的知情权，我们通过上表展示产品可能申请、使用的相关操作系统权限，您可以根据实际需要对相关权限进行管理。</p>
+<p>3. 根据产品升级，申请、使用权限的类型与目的会随产品功能变动，我们将及时调整列表以确保您及时获悉权限的申请与使用情况。</p>
+<p>4. 请您知悉，「应用锁」未接入任何第三方 SDK，全部权限均由本应用直接申请，不存在第三方插件额外申请权限的情形。</p>
+</section>
+
+<!-- ======================= English ======================= -->
+<section class="doc" id="doc-en" data-doc="en" lang="en">
+<h1>"App Lock" Privacy Policy</h1>
+<p>Updated November 20, 2026. Developer: chenzhengsoft. Contact: <a href="mailto:chenzhengsoft@outlook.com">chenzhengsoft@outlook.com</a>.</p>
+
+<nav class="toc" aria-label="Contents">
+  <p class="toc-t">Contents</p>
+  <ul>
+    <li><a href="#en-1">1. The app and accounts</a></li>
+    <li><a href="#en-2">2. On-device content and permissions</a></li>
+    <li><a href="#en-3">3. Personal information we collect and use</a></li>
+    <li><a href="#en-4">4. Cookies and similar technologies</a></li>
+    <li><a href="#en-5">5. Storage and protection of information</a></li>
+    <li><a href="#en-6">6. Sharing, transfer and public disclosure</a></li>
+    <li><a href="#en-7">7. Service providers</a></li>
+    <li><a href="#en-8">8. Your rights</a></li>
+    <li><a href="#en-9">9. Personal information of minors</a></li>
+    <li><a href="#en-10">10. Updates to this policy</a></li>
+    <li><a href="#en-11">11. How to contact us</a></li>
+    <li><a href="#en-annex">Annex I: Permissions requested and used</a></li>
+  </ul>
+</nav>
+
+<h2 id="en-1">1. The app and accounts</h2>
+<p>"App Lock" provides app locking, app hiding and encrypted file hiding. Its design principle is <span class="ph">data stays on your device</span>: all business logic runs locally, and data is stored in the app's sandbox and the system-protected encrypted storage area on your device.</p>
+<p>The app has no account system and does not require a phone number, email address or other identifying information. Products, purchases, restoration and subscriptions are managed by Apple and the App Store. We do not receive your Apple account password, card number or full payment credentials.</p>
+<p>When you use certain features, we access necessary system permissions after obtaining your consent. These permissions serve specific features; declining them only disables the relevant feature and does not affect your normal use of the other features of "App Lock".</p>
+
+<h2 id="en-2">2. On-device content and permissions</h2>
+<p>Your app-locking configurations, standalone password and password hash, encrypted files, intrusion-capture images and feature toggles are stored in the app's private area on your device. They are never uploaded to our servers, and we operate no personal-information server of our own.</p>
+<p>"App Lock" requests or uses the following system permissions. The types and purposes of permissions may change as the product upgrades, and we will update this list accordingly:</p>
+<table>
+<thead><tr><th>System permission</th><th>Scenario and purpose</th><th>Consequence of declining</th></tr></thead>
+<tbody>
+<tr><td>Screen Time / Family Controls</td><td>Used by app locking, app hiding and anti-peeking features to restrict or hide designated apps at the moments you choose. The permission is centrally managed by iOS; the app cannot read content, accounts or data inside other apps, nor does it report the list of managed apps to any server.</td><td>App locking, app hiding and anti-peeking are unavailable; encrypted file hiding and other features are unaffected.</td></tr>
+<tr><td>Photo Library (read selected photos and videos)</td><td>Used by encrypted file hiding to encrypt the photos and videos you select into the app's private area. By default the originals are deleted from the system photo library after import (recoverable from the system Photos app's "Recently Deleted").</td><td>Encrypted file hiding is unavailable; other features are unaffected.</td></tr>
+<tr><td>Camera</td><td>Used by intrusion capture to record an image and show you a warning when an unauthorized capture attempt is detected. Captured images stay on your device.</td><td>Intrusion capture is unavailable; other features are unaffected.</td></tr>
+<tr><td>Face ID</td><td>Used to verify the user when you view encrypted content, change configurations or unlock. Verification is performed by iOS; the app neither obtains nor stores your facial data.</td><td>Face ID unlock is unavailable, but you can still unlock with your standalone password.</td></tr>
+<tr><td>Photo Library Additions</td><td>Used only when you explicitly choose to write results back to the system photo library.</td><td>Results cannot be saved back to the system photo library; other features are unaffected.</td></tr>
+</tbody>
+</table>
+<p>You can manage these permissions at any time in system settings. Unless required by law, refusing to provide the relevant information only makes the corresponding feature unavailable.</p>
+
+<h2 id="en-3">3. Personal information we collect and use</h2>
+<p>We use the information we collect to: (1) ensure the basic operation of the product; (2) provide each feature and service; (3) optimize and improve the product and services; (4) safeguard users' security of use; and (5) comply with applicable laws and national standards.</p>
+<h3>3.1 Ensuring proper operation of the software and services</h3>
+<p>The app reads necessary system information locally on your device, such as hardware model, operating system version, app version, and network access method and type. This is used for local feature decisions and troubleshooting so as to pinpoint crash locations and abnormal behavior. Such information is not uploaded to our servers.</p>
+<h3>3.2 Information you provide voluntarily</h3>
+<p>When you contact us by email with feedback or questions, we receive the email address, the content of your message and any contact details you choose to include. We use it to meet your requests, provide related products or services, or for the purpose of anti-fraud. Do not include passwords or full payment credentials in your message.</p>
+<h3>3.3 Changes in the purpose of collection and use</h3>
+<p>As our business develops, the features and services of "App Lock" may be adjusted and changed. In principle, where a new feature or service relates to the same scenario as an old one, the personal information collected and used will have a direct or reasonable connection with the original processing purpose. In scenarios with no direct or reasonable connection with the original purpose, we will notify you again and obtain your consent before collecting or using your personal information.</p>
+<h3>3.4 Collection exempt from consent under applicable law</h3>
+<p>In accordance with applicable laws and/or relevant national standards, we collect and use your personal information without obtaining your authorization or consent in the following circumstances:</p>
+<ul>
+<li>directly related to national security or national defense;</li>
+<li>directly related to public security, public health or major public interests;</li>
+<li>directly related to criminal investigation, prosecution, trial and enforcement of judgments;</li>
+<li>necessary to protect the life, property or other major legitimate rights and interests of the individual or other persons, where it is difficult to obtain the consent of the person concerned;</li>
+<li>the personal information you collected has been made public by you yourself;</li>
+<li>your personal information collected from lawfully publicly disclosed sources, such as lawful news reports or government information disclosure;</li>
+<li>necessary to sign and perform a contract at your request;</li>
+<li>necessary to maintain the stable and secure operation of the software and related services, such as detecting and handling software faults;</li>
+<li>other circumstances provided for by applicable laws and regulations.</li>
+</ul>
+<h3>3.5 Non-personal information</h3>
+<p>Where necessary, we collect data that cannot be directly linked to a specific individual, such as local run logs, crash logs and feature-usage statistics. Such information is kept only on your device, is used to diagnose performance issues and improve the product experience, is never associated with your identifying information, and is not used for advertising. If we combine non-personal information with personal information, it will be treated as personal information during that combination.</p>
+
+<h2 id="en-4">4. Cookies and similar technologies</h2>
+<p>Cookies and similar technologies are common technologies on the internet. "App Lock" is a local app running on iOS and does not run in a browser environment, so it uses no cookies or similar technologies. The app only uses iOS preferences (UserDefaults) to store a small number of feature flags locally, such as whether you have read this privacy policy. Such data contains no identifying information and never leaves your device.</p>
+
+<h2 id="en-5">5. Storage and protection of information</h2>
+<h3>5.1 Storage location</h3>
+<p>In accordance with applicable laws, personal information collected within the mainland of China is stored within the mainland of China. All business data of "App Lock" (including encrypted files, app-locking configurations, intrusion-capture images, password hashes and key material) is stored in the app sandbox and the system-protected encrypted storage area on your device. We operate no personal-information server of our own and store no personal information content on any server. We do not currently transfer information outside the mainland of China; if we ever do, we will follow the rules of the relevant jurisdictions or obtain your consent.</p>
+<h3>5.2 Retention period</h3>
+<p>We retain your personal information only for as long as necessary to achieve the relevant purpose, for example the email address you provide when giving feedback. Because local data is stored on your device along with the app, uninstalling the app deletes the related data.</p>
+<h3>5.3 Security measures</h3>
+<p>We attach great importance to the security of your personal information and take reasonable technical and organizational measures to prevent improper use, unauthorized access, public disclosure, use, modification, damage, loss or leakage:</p>
+<ul>
+<li>The security design follows a "data stays on the device" principle. Encrypted files and key material are kept in the iOS protected storage area and protected by iOS data protection mechanisms (file encryption attributes and Keychain). Viewing or restoring content requires Face ID / Touch ID or your standalone password.</li>
+<li>The app integrates no third-party SDK, advertising platform or analytics service, which reduces the risk of data reaching third parties at the source.</li>
+<li>We maintain an emergency response plan. In the event of a user information security incident, we start the plan immediately, notify you of the incident's basic situation and possible impact, the measures taken and to be taken, self-protection advice and remedies as required by law, and report the handling to regulators as required.</li>
+</ul>
+<p>Please understand that, given technical limitations and the variety of possible malicious means, even with every reasonable safeguard no system on the internet can guarantee absolute security of information. We strongly recommend you take active measures to protect your personal information, including not disclosing your password or other personal information to others. Please also note that the protective measures in this policy apply only to the "App Lock" software and related services. Once you leave "App Lock" and browse or use other websites, services or content, we have no ability or obligation to protect any personal information you submit on those other apps or websites.</p>
+
+<h2 id="en-6">6. Sharing, transfer and public disclosure</h2>
+<h3>6.1 Sharing</h3>
+<p>We do not share your personal information with any other company, organization or individual, except in the following circumstances:</p>
+<ul>
+<li>With your explicit authorization, we share only the information necessary to achieve the relevant purpose. If a third party needs to use personal information beyond that authorization, it will obtain your consent again.</li>
+<li>We sign strict confidentiality agreements with each recipient, assess its data security capability and environment, and require it to process the information with confidentiality and security measures no less protective than those required by this privacy policy.</li>
+</ul>
+<p>All privacy data of "App Lock" is stored locally on your device, and there is no technical path for outbound sharing. Except as otherwise required by law, we do not provide your personal information to any third party.</p>
+<h3>6.2 Transfer</h3>
+<p>We do not transfer your personal information to any company, organization or individual. The only case involving information you provide voluntarily is feedback or inquiry content you send us by email, which travels through the email channel to our mailbox for the purpose of handling your request. If a merger, acquisition or bankruptcy liquidation involves a transfer of personal information, we will require the new holder to remain bound by this privacy policy, or obtain your authorization again.</p>
+<h3>6.3 Public disclosure</h3>
+<p>We disclose your personal information publicly only in the following cases: after your explicit consent; when required by law, legal procedure, litigation or mandatory demands of competent authorities; and where disclosure is unavoidable, in which case we will inform you in advance of the purpose and the types of information to be disclosed and obtain your explicit consent before disclosing it.</p>
+
+<h2 id="en-7">7. Service providers</h2>
+<p>The "App Lock" app itself integrates no third-party SDK. The following third parties are involved only when you use the related service or visit our official website, and their handling of data is governed by their own policies:</p>
+<ul>
+<li>Apple / App Store: products, purchases, restoration and subscription management; see <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+<li>GitHub Pages: hosts our official website, policies, encrypted configuration and some assets; requests may generate provider access logs. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</li>
+</ul>
+<p>Providers' independent processing and retention are governed by their policies. We do not sell your personal information or local business data to data brokers.</p>
+
+<h2 id="en-8">8. Your rights</h2>
+<h3>8.1 Withdrawing consent</h3>
+<p>You can change your authorization for "App Lock" in system settings at any time. Once you withdraw consent, we no longer process the corresponding personal information. Your withdrawal does not affect processing carried out under your earlier authorization.</p>
+<h3>8.2 Deletion</h3>
+<p>You can delete your files and other data within "App Lock". Uninstalling the "App Lock" app from your iOS device removes all local data along with it. If a file was deleted from the system photo library, you can also recover it from the system Photos app's "Recently Deleted".</p>
+<h3>8.3 Correction</h3>
+<p>You can modify app-locking configurations, change your standalone password, or delete encrypted files and related records inside the app.</p>
+<h3>8.4 Accessing this privacy policy</h3>
+<p>You can view the full text of this privacy policy in the app under "Settings" – "Privacy Policy".</p>
+<h3>8.5 Notice on termination of service</h3>
+<p>If we cease operation, we will promptly stop collecting your personal information, notify you by individual delivery or public announcement, and delete or anonymize the personal information we hold.</p>
+
+<h2 id="en-9">9. Personal information of minors</h2>
+<p>We attach great importance to the protection of personal information of minors. Under applicable laws and regulations, if you are under 18 years old, you should obtain the written consent of your parent or legal guardian before using the "App Lock" service.</p>
+<p>We protect minors' personal information in accordance with relevant national laws and regulations, and collect, use, share or disclose it only when permitted by law, when parents or other guardians have explicitly consented, or when necessary to protect minors. If we discover that minors' personal information was collected without verifiable parental consent, we will try to delete it as soon as possible.</p>
+
+<h2 id="en-10">10. Updates to this policy</h2>
+<p>We may revise this privacy policy from time to time. When the terms change, we will present the revised privacy policy in a notice during app updates. Please note that we will collect, use and store your personal information under the updated policy only after your confirmation.</p>
+
+<h2 id="en-11">11. How to contact us</h2>
+<p>If you have any questions, complaints, suggestions, or issues involving the personal information of minors, please contact us at <a href="mailto:chenzhengsoft@outlook.com">chenzhengsoft@outlook.com</a>. We will review the issue as soon as possible and reply within fifteen working days after verifying your identity.</p>
+<p>This policy is copyrighted by the developer, who reserves all rights to interpret and amend it.</p>
+
+<h2 id="en-annex">Annex I: Description of permissions requested and used by "App Lock"</h2>
+<p>1. To ensure that "App Lock" operates properly and securely, we request or use relevant operating-system permissions according to actual business scenarios.</p>
+<p>2. To protect your right to know, the table above lists the operating-system permissions the product may request or use. You may manage these permissions as needed.</p>
+<p>3. As the product upgrades, the types and purposes of permissions requested or used change with the product's features, and we will update the list in a timely manner so that you stay informed of permission requests and use.</p>
+<p>4. Please note that "App Lock" integrates no third-party SDK; all permissions are requested directly by this app, and there is no third-party plugin requesting additional permissions.</p>
+</section>
+
+</main>
+<footer>
+  <span>© <span id="yr">2026</span> chenzhengsoft · 应用锁 AppLock</span>
+  <span><a href="/">首页</a> · <a href="/terms.html">用户协议 / EULA</a></span>
+</footer>
+<script>
+(function(){
+  var docs=document.querySelectorAll('.doc');
+  var langA=document.querySelectorAll('#langSeg a');
+  var cur=null;
+  function langOf(hash){
+    var h=(hash||'').replace(/^#/,'');
+    if(h.indexOf('en')===0) return 'en';
+    if(h.indexOf('zh')===0) return 'zh';
+    return null;
+  }
+  function apply(scrollTop){
+    var h=(location.hash||'').replace(/^#/,'');
+    var l=langOf(h);
+    if(!l){ l='zh'; history.replaceState(null,'','#zh'); h='zh'; }
+    if(cur!==l){
+      docs.forEach(function(d){ d.classList.toggle('on', d.getAttribute('data-doc')===l); });
+      langA.forEach(function(a){ a.classList.toggle('on', a.dataset.lang===l); });
+      document.documentElement.lang = (l==='zh')?'zh-CN':'en';
+      document.title = (l==='zh'?'「应用锁」隐私政策':'App Lock Privacy Policy')+' · 应用锁 AppLock';
+      cur=l;
+      if(scrollTop) window.scrollTo(0,0);
+    }
+  }
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  window.addEventListener('hashchange',function(){ apply(true); });
+  apply(false);
+  window.scrollTo(0,0);
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

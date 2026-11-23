@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>应用锁 AppLock · 用户协议 / User Agreement</title>
+<meta name="description" content="「应用锁」用户协议（AppLock User Agreement），说明服务内容、使用规则、知识产权、免责与责任限制。">
+<meta name="theme-color" content="#2f6feb">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='7' fill='%232f6feb'/%3E%3Crect x='8' y='12' width='12' height='9' rx='2' fill='%23fff'/%3E%3Cpath d='M10.5 12v-2.2a3.5 3.5 0 017 0V12' stroke='%23fff' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --text:#1c1f23; --muted:#5d646e;
+  --line:#e3e6ea; --accent:#2f6feb; --accent-soft:#eaf1fe;
+  --ph-bg:#fff7e6; --ph-line:#e0a32e; --ph-text:#8a5b00;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14161a;--card:#1c1f24;--text:#e8eaed;--muted:#a2a9b4;--line:#2c3138;
+        --accent:#6c9bff;--accent-soft:#1f2a3d;--ph-bg:#33280f;--ph-line:#a97d1f;--ph-text:#e8c477;
+        --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);}
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.9;font-size:16px}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+@supports (backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px)){
+  header{background:rgba(246,247,249,.86);-webkit-backdrop-filter:saturate(180%) blur(12px);backdrop-filter:saturate(180%) blur(12px)}
+  @media (prefers-color-scheme:dark){header{background:rgba(20,22,26,.86)}}
+}
+.hd{max-width:860px;margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:.2px;text-decoration:none;color:inherit}
+.brand svg{flex:none;border-radius:7px}
+.brand small{font-weight:500;color:var(--muted);font-size:12px}
+.spacer{flex:1 1 auto}
+.seg{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;box-shadow:var(--shadow)}
+.seg a{padding:5px 12px;border-radius:7px;font-size:13.5px;color:var(--muted);text-decoration:none;white-space:nowrap;font-weight:500}
+.seg a.on{background:var(--accent);color:#fff}
+.seg a:not(.on):hover{background:var(--accent-soft);color:var(--accent)}
+main{max-width:860px;margin:0 auto;padding:28px 20px 0}
+.doc{display:none;background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:44px 48px 52px;box-shadow:var(--shadow)}
+.doc.on{display:block}
+  [id^="zh-"],[id^="en-"]{scroll-margin-top:84px}
+.doc h1{font-size:25px;line-height:1.5;margin:0 0 6px;padding-bottom:18px;border-bottom:1px solid var(--line);letter-spacing:.2px}
+.doc .sub{color:var(--muted);font-size:14px;margin:0 0 22px}
+.doc h2{font-size:17.5px;margin:34px 0 10px;padding-left:12px;border-left:3px solid var(--accent);line-height:1.6}
+.doc h2:first-of-type{margin-top:0}
+.doc h3{font-size:15.5px;margin:22px 0 8px;line-height:1.7}
+.doc p{margin:0 0 12px;color:var(--text);text-align:justify}
+.doc ol,.doc ul{padding-left:24px;margin:0 0 14px}
+.doc li{margin:0 0 7px}
+.doc li>p{margin:0 0 4px}
+.clause{font-size:14.5px;margin:0 0 10px}
+.clause b{font-weight:700}
+.toc{background:var(--accent-soft);border:1px solid var(--line);border-radius:10px;padding:14px 18px 12px;margin:0 0 30px}
+.toc-t{margin:0 0 6px;font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
+.toc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:26px}
+.toc li{font-size:13.5px;color:var(--muted);line-height:1.85;break-inside:avoid}
+.toc a{color:inherit;text-decoration:none}
+.toc a:hover{color:var(--accent)}
+.notice{background:var(--ph-bg);border:1px solid var(--ph-line);border-left-width:4px;color:var(--ph-text);
+  border-radius:10px;padding:16px 20px;margin:0 0 26px;font-size:14.5px}
+.notice b{display:block;margin-bottom:6px;font-size:15px}
+.notice p{margin:0 0 8px;text-align:justify;color:inherit}
+.notice p:last-child{margin:0}
+footer{max-width:860px;margin:0 auto;padding:26px 20px 40px;color:var(--muted);font-size:12.5px;
+  border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+footer a{color:inherit}
+@media (max-width:640px){
+  .doc{padding:26px 20px 34px;border-radius:12px}
+  .doc h1{font-size:20px}.doc h2{font-size:16px}
+  .toc ul{columns:1}
+  .hd{padding:10px 14px;row-gap:8px}
+  .spacer{display:none}
+  .seg{flex:1 1 46%}
+  .seg a{flex:1 1 auto;text-align:center;padding:6px 4px;font-size:13px}
+}
+@media print{
+  header,footer,.toc{display:none!important}
+  body{background:#fff;font-size:11.5pt;line-height:1.75}
+  .doc{display:none;border:0;box-shadow:none;padding:0}
+  .doc.on{display:block}
+  [id^="zh-"],[id^="en-"]{scroll-margin-top:84px}
+  .doc h2{page-break-after:avoid}
+  .doc h3{page-break-after:avoid}
+  .doc p,.notice{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hd">
+    <a class="brand" href="/"><svg width='28' height='28' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'><rect width='28' height='28' rx='7' fill='#2f6feb'/><rect x='8' y='12' width='12' height='9' rx='2' fill='#fff'/><path d='M10.5 12v-2.2a3.5 3.5 0 017 0V12' stroke='#fff' stroke-width='1.8' fill='none' stroke-linecap='round'/></svg><span>应用锁 <small>AppLock</small></span></a>
+    <div class="spacer"></div>
+    <nav class="seg" id="langSeg" aria-label="语言 / Language">
+      <a href="#zh" data-lang="zh">中文</a>
+      <a href="#en" data-lang="en">English</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<!-- ======================= 中文 ======================= -->
+<section class="doc" id="doc-zh" data-doc="zh" lang="zh-CN">
+<h1>《应用锁》用户协议</h1>
+<p class="sub">本协议更新日期：2026 年 11 月 20 日</p>
+
+<div class="notice">
+  <b>特别提示</b>
+  <p>您在使用应用锁软件及服务前，请确保本人已经完全理解并接受本协议所有条款（尤其是<b>免责和责任限制条款</b>），否则，请不要下载、登录或使用。一旦您下载、登录或使用，则表明您已经完全理解并接受本协议所有条款，尤其是免责和责任限制条款。其中免除或者限制责任条款等重要内容将以加粗形式提示您注意，您应重点阅读。</p>
+  <p>如您未满 18 周岁，请在监护人陪同下仔细阅读并充分理解本协议，并征得监护人的同意后使用应用锁软件及相关服务。</p>
+</div>
+
+<nav class="toc" aria-label="目录">
+  <p class="toc-t">目录 / Contents</p>
+  <ul>
+    <li><a href="#zh-1">一、接受协议</a></li>
+    <li><a href="#zh-2">二、服务内容及软件形式</a></li>
+    <li><a href="#zh-3">三、用户使用规则</a></li>
+    <li><a href="#zh-4">四、保密及隐私保护</a></li>
+    <li><a href="#zh-5">五、知识产权</a></li>
+    <li><a href="#zh-6">六、免责声明</a></li>
+    <li><a href="#zh-7">七、责任限制</a></li>
+    <li><a href="#zh-8">八、服务的修改或终止</a></li>
+    <li><a href="#zh-9">九、终止服务及违约处理</a></li>
+    <li><a href="#zh-10">十、法律管辖与适用</a></li>
+    <li><a href="#zh-11">十一、其他</a></li>
+  </ul>
+</nav>
+
+<h2 id="zh-1">一、接受协议</h2>
+<p class="clause">1.1 本服务协议（以下简称 "本协议"）是由您（以下也简称 "用户"）与本应用个人开发者（以下简称 "开发者"）就《应用锁》软件（以下简称 "本软件"）提供的应用上锁、文件隐藏、私密空间管理等服务所达成的协议。</p>
+<p class="clause">1.2 您确认：一旦您下载、使用应用锁软件或服务，便表示您已经完全理解并同意接受本协议。如您未满 18 周岁，请在监护人陪同下仔细阅读并充分理解本协议，并征得监护人的同意后使用应用锁软件及相关服务。</p>
+<p class="clause">1.3 您确认：开发者可自行全权决定更改 "本协议"。如 "本协议" 有任何变更，开发者将在应用内公告通知用户。如用户不同意相关变更，则必须停止使用本软件及服务；如果用户继续使用本软件及服务，则表示已无条件接受经修订的协议。经修订的协议一经在应用内公布后，立即自动生效。</p>
+<p class="clause">1.4 本协议（包括修订后的版本）、《应用锁》隐私政策共同构成了应用锁软件及服务的完整协议，对用户及开发者均具有法律约束力。</p>
+
+<h2 id="zh-2">二、服务内容及软件形式</h2>
+<h3>2.1 服务内容</h3>
+<p>应用锁是向广大用户提供应用上锁、照片视频文档隐藏、私密空间管理的软件，除非另有明确规定，增强或强化目前服务的任何新功能，包括新产品以及新增加的服务，均无条件地适用本协议。</p>
+<h3>2.2 软件形式</h3>
+<p>（1）用户可以在 iPhone、iPad 等 iOS 终端使用本软件，具体以开发者提供的版本为准，开发者会不断丰富本软件的终端适配。当用户使用本软件时，用户应选择与用户的终端、系统相匹配的软件版本，否则，用户可能无法正常使用本软件。</p>
+<p>（2）为了改善用户体验、完善服务内容，保证本软件及服务的安全性和功能的一致性等目的，开发者将不断努力开发新的服务，并有权对本软件进行更新（这些更新可能会采取软件替换、修改、功能强化、版本升级等形式），或者对本软件的部分功能效果进行改变或限制，或者终止或中止本软件及相关服务。本软件新版本发布后，开发者不保证旧版软件继续可用及相应支持，请随时核对并下载最新版本。用户充分理解并同意，开发者拥有上述权利，并可以在不向用户特别通知的情况下行使该权利。</p>
+<p class="clause">2.3 用户充分理解并同意，应用锁仅向广大用户提供应用上锁、文件隐私加密、私密空间管理的软件，除此之外与相关网络服务有关的设备（手机等）及所需的费用（上网流量费等）均应由用户自行负责。</p>
+<h3>2.4 权限与功能说明</h3>
+<p>为了向您提供完整的应用上锁、隐私加密管理等服务，本软件可能需要调用您设备的部分系统权限。相关权限的具体名称、使用目的及授权方式已在《应用锁》隐私政策中详细说明，请您仔细阅读。您可以在设备系统设置中随时查看和管理应用的权限授权状态。</p>
+<p class="clause">2.4.1 危险权限（需用户主动授权）：包括相机、通知、生物识别等涉及个人敏感信息的权限，均需您主动授权同意后方可使用。您有权拒绝授权，也有权随时撤回授权，但这可能导致对应功能无法正常使用。</p>
+<p class="clause">2.4.2 特殊权限（需系统设置授权）：屏幕使用时间权限，需要您跳转到系统设置页面手动开启，用于实现应用上锁、应用限制等核心能力。</p>
+
+<h2 id="zh-3">三、用户使用规则</h2>
+<h3>3.1 用户账号与内购</h3>
+<p>（1）本应用依托 Apple ID 实现内购权益绑定，您的付费权益绑定您的 Apple ID。您应当妥善保管自己的 Apple ID，通过该账号发生的一切购买行为均视为您本人行为，您应当对 Apple ID 项下进行的所有活动和事件以及因此而产生的一切后果负法律责任。</p>
+<p>（2）用户承诺，在使用本软件服务过程中遵守法律法规。因用户保管疏忽、账号泄露导致权益被他人使用，开发者不承担责任。</p>
+<p>（3）付费相关：本应用提供自动续订周订阅、年订阅以及一次性永久解锁三种付费项目。订阅由 Apple 平台管理，您可在 iPhone 设置 - Apple ID - 订阅中随时取消自动续订；退款申请按照 Apple 官方规则处理，开发者无法直接处理退款。永久解锁为一次性非消耗型购买，绑定 Apple ID，无自动续费。</p>
+<p class="clause">3.2 根据有关法律法规，开发者在此郑重提请用户注意，您在本软件内保存的私密内容，由您本人承担全部责任。开发者无法控制您存储的内容，在任何情况下，开发者不为任何用户存储内容负责，包含但不限于内容错误、丢失，以及存储内容衍生的任何损失或损害。但开发者有权依法停止传输任何违规内容并采取相应行动，包括向有关机关报告。</p>
+<p class="clause">3.3 用户在使用应用锁功能时，必须遵守国家有关法律规定，并承担一切因自己存储内容不当导致的民事、行政和/或刑事法律责任。用户存储、保存的信息，不得含有以下任何内容：</p>
+<ol>
+<li>违反宪法确定的基本原则的；</li>
+<li>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</li>
+<li>损害国家荣誉和利益的；</li>
+<li>煽动民族仇恨、民族歧视，破坏民族团结的；</li>
+<li>破坏国家、地区间友好关系的；</li>
+<li>违背中华民族传统美德、社会公德、伦理道德、以及社会主义精神文明的；</li>
+<li>破坏国家宗教政策，宣扬邪教和封建迷信的；</li>
+<li>散布谣言或不实消息，扰乱社会秩序，破坏社会稳定的；</li>
+<li>煽动、组织、教唆恐怖活动、非法集会、结社、游行、示威、聚众扰乱社会秩序的；</li>
+<li>散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；</li>
+<li>侮辱或诽谤他人，侵害他人合法权益的；</li>
+<li>侵犯他人肖像权、姓名权、名誉权、隐私权或其他人身权利的；</li>
+<li>使用漫骂、辱骂、中伤、恐吓、诅咒等不文明语言的；</li>
+<li>以非法民间组织名义活动的；</li>
+<li>侵犯他人著作权、信息网络传播权等合法权益的；</li>
+<li>含有法律、行政法规禁止的其他内容的。</li>
+</ol>
+<p class="clause">3.4 除非法律允许或开发者事先书面同意，用户在使用本软件及服务过程中不得从事下列行为：</p>
+<ol>
+<li>删除本软件及其副本上关于著作权的信息；</li>
+<li>对本软件进行反向工程、反向汇编、反向编译，或者以其他方式尝试发现本软件的源代码；</li>
+<li>恶意破解、篡改本软件，攻击本软件，对产品稳定性造成威胁；</li>
+<li>对开发者拥有知识产权的内容进行使用、出租、出借、复制、修改、链接、转载、汇编、发表、出版等；</li>
+<li>通过修改或伪造软件运行中的指令、数据，增加、删减、变动软件的功能或运行效果，或者将用于上述用途的软件、方法进行运营或向公众传播，无论这些行为是否为商业目的；</li>
+<li>通过非开发者开发、授权的第三方软件、插件、外挂、系统，使用本软件，或制作、发布、传播上述工具；</li>
+<li>自行或者授权他人、第三方软件对本软件及其组件、模块、数据进行干扰；</li>
+<li>其他未经开发者明示授权的行为。</li>
+</ol>
+<p class="clause">3.5 除非法律允许或开发者事先书面同意，用户使用本软件及服务过程中不得从事下列行为：</p>
+<ol>
+<li>提交、保存虚假违法信息，或冒充、利用他人名义的；</li>
+<li>侵害他人名誉权、肖像权、知识产权、商业秘密等合法权利的；</li>
+<li>利用本软件及服务从事任何违法犯罪活动的；</li>
+<li>制作、发布与以上行为相关的方法、工具，或对此类方法、工具进行运营或传播，无论这些行为是否为商业目的；</li>
+<li>其他违反法律法规规定、侵犯其他用户合法权益、干扰产品正常运营或开发者未明示授权的行为。</li>
+</ol>
+<p class="clause">3.6 如果用户违反本协议的任意一条约定的，为维护产品安全，开发者有权限制、终止您使用本软件的权限，同时保留依法追究当事人法律责任的权利。开发者采取限制措施后不为此向用户承担违约责任或其他法律责任。</p>
+<p class="clause">3.7 用户需独立对自己在应用锁上实施的行为承担法律责任。若用户的行为不符合本协议，开发者有权立即取消用户服务权限。用户若在应用锁中保存、传播违法违规信息，相关记录可作为用户违反法律的证据。</p>
+<p class="clause">3.8 开发者不对用户本地存储的照片、视频、文档等文件丢失、损坏、无法打开承担任何责任。开发者有权判定用户的行为是否符合中国法律法规的规定以及本协议的要求，如果用户违背了中国法律法规的规定或本协议的规定，开发者有中断对其提供服务的权利。</p>
+
+<h2 id="zh-4">四、保密及隐私保护</h2>
+<p class="clause">4.1 除本协议另有约定外，未经用户的同意，开发者不会向第三方公开或传播用户的信息，开发者将采取合理的保密措施保护用户的信息。关于个人信息的收集、使用、存储、共享、保护等具体内容，请您查阅《应用锁》隐私政策。</p>
+<p class="clause">4.2 用户理解并同意，若非因开发者人为原因，如因设备丢失、被盗、黑客攻击、设备损坏等造成信息泄露、丢失的，开发者不承担法律责任。</p>
+<p class="clause">4.3 开发者在下述情况下不再承担保密义务：</p>
+<ol>
+<li>因非开发者人为的原因，用户本地信息被公开的；</li>
+<li>法律法规要求、行政司法机关、其他有权机关依法要求披露的；</li>
+<li>事先获得用户的授权；</li>
+<li>为查找、预防或处理欺诈、安全或技术方面的问题；</li>
+<li>为执行相关服务协议或本政策、维护社会公共利益；</li>
+<li>为保护其他用户、开发者或相关人员的人身财产安全或其他合法权益等合理且必要的用途。</li>
+</ol>
+<p class="clause">4.4 一旦用户选择使用本服务，即表示用户认可并接受与本服务相关的隐私政策的内容以及开发者可能随时更新并公布的新版本的隐私政策。</p>
+
+<h2 id="zh-5">五、知识产权</h2>
+<p class="clause">5.1 本软件相关著作权及其他相关权利（包括本软件所包含的所有文字、图表、用户界面、可视界面、图片、标识、声音、美术作品及计算机编码，包括与前述内容相关的设计、结构、选择、协调、表达、"界面外观" 及排序等）属于开发者所有，受版权、商标和/或其它财产所有权法律的保护。</p>
+<p class="clause">5.2 开发者不就本软件的适用性及符合用户使用目的承担任何保证或承诺，亦不对本软件及本软件所包含的任何文本、图形等资料产生或在传送或递交全部或部分资料过程中产生的延误、不准确、错误和遗漏或从中产生或由此产生的任何损害赔偿，以任何形式向用户或任何第三方负法律责任。</p>
+<p class="clause">5.3 在用户遵守本协议的情况下，开发者即授予用户一项个人、非排他性、不可转让、有限的权利以使用本软件。用户可以在用户自己所有的终端设备上安装、使用、显示、运行本软件。但未经开发者事先明确书面同意，用户不得为出版或发行或为任何其他商业目的以任何方式将本软件的任何部分及任何内容复制、再制、重印、上传、发布、公开展示、编码、翻译、传输或散布至任何其他设备、服务器、软件或其他媒介。</p>
+<p class="clause">5.4 本协议未明示授权的其他一切权利仍由开发者所有，用户在行使这些权利时须另外取得开发者的书面许可。开发者如果未行使前述任何权利，并不构成对该权利的放弃。</p>
+
+<h2 id="zh-6">六、免责声明</h2>
+<p class="clause">6.1 用户明确同意其使用应用锁所存在的风险将完全由其本人承担；因其使用应用锁而产生的一切后果也由其本人承担，开发者对用户及任何第三方不承担任何责任。</p>
+<p class="clause">6.2 开发者不担保网络服务一定能满足用户的要求，也不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作任何担保或保证。</p>
+<p class="clause">6.3 对于因不可抗力或开发者不能控制的原因造成的服务中断或其它缺陷，开发者不承担任何责任，但将尽力减少因此而给用户造成的损失和影响。</p>
+<p class="clause">6.4 开发者对于用户本地存储的私密数据，不保证绝对安全。因忘记密码、设备损坏、系统重装、卸载 App 等原因造成本地私密数据丢失，风险由用户自行承担，请用户自行做好备份。</p>
+<p class="clause">6.5 用户同意，对于开发者向用户提供的下列产品或者服务的质量缺陷本身及其引发的任何损失，开发者无需承担任何责任：</p>
+<ol>
+<li>开发者向用户免费提供的各项功能；</li>
+<li>用户自行存储的本地私密资料遭到未授权的使用或修改；</li>
+<li>其他与应用锁相关的事宜。</li>
+</ol>
+
+<h2 id="zh-7">七、责任限制</h2>
+<p>用户明确了解并同意，基于以下原因造成的包括但不限于利润、信誉、应用、数据损失或其它无形损失，<b>开发者不承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿责任</b>（即使开发者事先已被告知发生此种赔偿之可能性亦然）：</p>
+<ol>
+<li>本软件服务之使用或无法使用；</li>
+<li>用户的本地私密数据遭到未获授权的存取或变造；</li>
+<li>用户违反本协议、法律法规使用本软件产生的相关损失。</li>
+</ol>
+
+<h2 id="zh-8">八、服务的修改或终止</h2>
+<p>开发者有权于任何时间暂时或永久修改或终止我们的服务（或其任何部分）。用户同意对于我们的服务所作的任何修改、暂停或终止，开发者对用户和任何第三人均无需承担任何责任。</p>
+
+<h2 id="zh-9">九、终止服务及违约处理</h2>
+<p class="clause">9.1 用户充分理解并同意，在开发者发现或收到他人举报或投诉用户违反有关法律法规或本协议约定的，开发者有权根据用户的行为性质自行决定且无需提前通知，采取包括但不限于暂停或终止本服务、追究法律责任、索赔全部损失等措施。用户理解，用户对本协议的任何违反均可能对开发者造成无法弥补的损害，同意开发者获得必要的救济。</p>
+<p class="clause">9.2 用户同意，开发者可自行决定且无需提前通知，因下列原因终止用户访问本软件的权限，包括但不限于：</p>
+<ol>
+<li>应政府部门和司法机关的要求；</li>
+<li>本软件或本软件提供的任何服务的中止或重大修改；</li>
+<li>不可预期的技术问题。</li>
+</ol>
+<p class="clause">9.3 用户充分理解并同意，开发者有权依合理判断对违反有关法律法规或本协议规定的行为进行处理，对用户的违法违规行为采取适当的法律行动及措施，并依据法律法规保存有关信息向有关部门报告等，用户应独自承担由此而产生的一切法律责任。</p>
+<p class="clause">9.4 对于行政机关、司法机关或任何第三方向开发者提出的，因用户违反法律法规或本协议之约定使用本软件而产生的或与之有关的任何处罚、判决、调解、请求、损失、责任、主张或费用，用户同意赔偿开发者全部损失，并使其免受损害。</p>
+<p class="clause">9.5 开发者根据上述救济途径而对用户采取的措施均不会导致开发者对用户承担任何违约或任何其他可能导致的责任。在开发者选择终止本协议或停止服务后，开发者没有义务为用户保留本地以外的相关信息。</p>
+
+<h2 id="zh-10">十、法律管辖与适用</h2>
+<p class="clause">10.1 本服务协议的生效、履行、解释及争议的解决均适用中华人民共和国法律。</p>
+<p class="clause">10.2 如就本协议内容或其执行发生任何争议，应尽量友好协商解决；协商不成时，争议各方一致同意向开发者所在地有管辖权的人民法院提起诉讼。</p>
+
+<h2 id="zh-11">十一、其他</h2>
+<p class="clause">11.1 用户在使用应用锁过程中有任何咨询、意见或建议，可通过邮箱联系：<a href="mailto:chenzhengsoft@outlook.com"><b>chenzhengsoft@outlook.com</b></a>，开发者会在合理时限内反馈，但解答义务不超过合理承受限度。</p>
+<p class="clause">11.2 如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</p>
+<p class="clause">11.3 本软件及服务仅限于在中国地区使用，如用户擅自在中国以外的地区使用，开发者不承担因此而产生的任何责任。</p>
+<p class="clause">11.4 本协议自用户下载安装并使用本软件之日起生效，除非开发者终止本协议或者用户停止使用本软件，否则本协议始终有效。本协议终止并不免除用户根据本协议或其他有关协议、规则所应承担的义务和责任。</p>
+</section>
+
+<!-- ======================= English ======================= -->
+<section class="doc" id="doc-en" data-doc="en" lang="en">
+<h1>AppLock User Agreement</h1>
+<p class="sub">Last Updated: November 20, 2026</p>
+
+<div class="notice">
+  <b>Special Notice</b>
+  <p>Before using the AppLock software and services, please make sure that you have fully understood and accepted all of the terms of this Agreement (in particular, the <b>disclaimer of warranties and the limitation of liability</b>). If you do not, please do not download, log in to, or use the software. By downloading, logging in to, or using the software, you confirm that you have fully understood and accepted all of the terms of this Agreement, and in particular the disclaimer of warranties and the limitation of liability. Clauses disclaiming or limiting liability and other important provisions are highlighted in bold to draw your attention, and you should read them carefully.</p>
+  <p>If you are under 18 years of age, please read and fully understand this Agreement in the presence of a parent or guardian, and obtain the consent of your parent or guardian before using the AppLock software and related services.</p>
+</div>
+
+<nav class="toc" aria-label="Contents">
+  <p class="toc-t">Contents</p>
+  <ul>
+    <li><a href="#en-1">1. Acceptance of this Agreement</a></li>
+    <li><a href="#en-2">2. Service Content and Form of the Software</a></li>
+    <li><a href="#en-3">3. Rules for Users</a></li>
+    <li><a href="#en-4">4. Confidentiality and Privacy Protection</a></li>
+    <li><a href="#en-5">5. Intellectual Property</a></li>
+    <li><a href="#en-6">6. Disclaimer of Warranties</a></li>
+    <li><a href="#en-7">7. Limitation of Liability</a></li>
+    <li><a href="#en-8">8. Modification or Termination of the Service</a></li>
+    <li><a href="#en-9">9. Termination of Service and Breach Handling</a></li>
+    <li><a href="#en-10">10. Governing Law and Jurisdiction</a></li>
+    <li><a href="#en-11">11. Miscellaneous</a></li>
+  </ul>
+</nav>
+
+<h2 id="en-1">1. Acceptance of this Agreement</h2>
+<p class="clause">1.1 This Service Agreement (the "Agreement") is entered into between you (hereinafter also referred to as the "User") and the individual developer of this App (hereinafter referred to as the "Developer"), and governs the app-locking, file-hiding and private-space management services provided by the AppLock software (the "Software").</p>
+<p class="clause">1.2 You acknowledge that once you download, use the AppLock software or its services, you have fully understood and agreed to accept this Agreement. If you are under 18 years of age, please read and fully understand this Agreement in the presence of a parent or guardian and obtain your guardian's consent before using the AppLock software and related services.</p>
+<p class="clause">1.3 You acknowledge that the Developer may unilaterally decide to amend this Agreement. If this Agreement is amended in any way, the Developer will notify users by announcement within the App. If you do not agree to such changes, you must cease using the Software and its services; if you continue to use the Software and its services, you will be deemed to have unconditionally accepted the revised Agreement. A revised Agreement takes effect immediately upon its publication within the App.</p>
+<p class="clause">1.4 This Agreement (including any revised version) together with the AppLock Privacy Policy constitutes the entire agreement between the User and the Developer with respect to the AppLock software and services, and is legally binding upon both parties.</p>
+
+<h2 id="en-2">2. Service Content and Form of the Software</h2>
+<h3>2.1 Service Content</h3>
+<p>AppLock is a software application that provides the general public with app locking, photo/video/document hiding and private space management. Unless otherwise expressly provided, any new function that enhances or extends the existing services, including new products and newly added services, is unconditionally subject to this Agreement.</p>
+<h3>2.2 Form of the Software</h3>
+<p>(1) You may use the Software on iPhone, iPad and other iOS terminals, subject to the versions provided by the Developer, who will continue to enrich terminal compatibility for the Software. When using the Software, you should select the version matching your terminal and system; otherwise, you may be unable to use the Software normally.</p>
+<p>(2) In order to improve user experience, refine service content, and ensure the security and functional consistency of the Software and its services, the Developer will continue to develop new services and reserves the right to update the Software (such updates may take the form of software replacement, modification, feature enhancement or version upgrade), to change or restrict certain functions or effects of the Software, or to suspend or terminate the Software and related services. After a new version of the Software is released, the Developer does not guarantee that previous versions remain available or supported; please check and download the latest version at any time. You fully understand and agree that the Developer holds the aforementioned rights and may exercise them without special notice to users.</p>
+<p class="clause">2.3 You fully understand and agree that AppLock only provides the general public with software for app locking, file privacy encryption and private space management. In addition, the devices required for related network services (mobile phones, etc.) and the corresponding costs (mobile data fees, etc.) shall be borne by you.</p>
+<h3>2.4 Permissions and Feature Descriptions</h3>
+<p>In order to provide you with complete app-locking and privacy-encryption management services, the Software may need to invoke certain system permissions on your device. The specific names, purposes and authorization methods of such permissions are described in detail in the AppLock Privacy Policy; please read it carefully. You may at any time view and manage the permission status of the app in your device's system settings.</p>
+<p class="clause">2.4.1 Sensitive permissions (requiring your active authorization): permissions such as camera, notifications and biometrics that involve personal sensitive information must be actively authorized by you before they can be used. You have the right to refuse authorization and to withdraw it at any time, but this may cause the corresponding features to be unavailable.</p>
+<p class="clause">2.4.2 Special permissions (requiring authorization in system settings): the Screen Time permission requires you to manually enable it on the system settings page, and is used to implement core capabilities such as app locking and app restrictions.</p>
+
+<h2 id="en-3">3. Rules for Users</h2>
+<h3>3.1 User Accounts and In-App Purchases</h3>
+<p>(1) This App relies on your Apple ID to bind in-app purchase entitlements; your paid entitlements are bound to your Apple ID. You shall properly safeguard your Apple ID, and all purchase transactions made through that account are deemed to be your own acts. You shall bear all legal responsibility for all activities and events under your Apple ID and for all consequences arising therefrom.</p>
+<p>(2) You undertake to comply with applicable laws and regulations when using the Software and its services. Where entitlements are used by another person as a result of your negligence in safeguarding the account or of account leakage, the Developer shall not be liable.</p>
+<p>(3) Payment terms: this App offers three paid items — an auto-renewing weekly subscription, an annual subscription, and a one-time permanent unlock. Subscriptions are managed by the Apple platform, and you may cancel auto-renewal at any time in iPhone Settings - Apple ID - Subscriptions. Refund requests are handled under Apple's official rules, and the Developer cannot process refunds directly. The permanent unlock is a one-time non-consumable purchase bound to your Apple ID, with no auto-renewal.</p>
+<p class="clause">3.2 Pursuant to applicable laws and regulations, the Developer hereby expressly draws the User's attention to the fact that the Developer bears no responsibility whatsoever for the private content you store in the Software; such responsibility rests entirely with you. The Developer cannot control the content you store, and under no circumstances is the Developer responsible for any content stored by any user, including without limitation errors in content, loss of content, and any loss or damage arising from stored content. Nevertheless, the Developer reserves the right to stop transmitting any non-compliant content in accordance with law and to take corresponding action, including reporting to the competent authorities.</p>
+<p class="clause">3.3 When using the AppLock features, you must comply with applicable national laws and regulations and shall bear all civil, administrative and/or criminal legal liability arising from improper storage of content. Information stored or saved by you shall not contain any of the following:</p>
+<ol>
+<li>content that violates the basic principles of the Constitution;</li>
+<li>content that endangers national security, leaks state secrets, subverts the state power, or undermines national unity;</li>
+<li>content that damages national honor and interests;</li>
+<li>content that incites ethnic hatred or ethnic discrimination and undermines national unity;</li>
+<li>content that damages friendly relations among nations, regions or localities;</li>
+<li>content that contravenes traditional Chinese virtues, social morality, ethics, and the spirit of socialist civilization;</li>
+<li>content that undermines religious policies of the State, or propagates cult or superstition;</li>
+<li>content that spreads rumors or false information, disturbs social order, or undermines social stability;</li>
+<li>content that incites, organizes or instigates terrorist activities, illegal assemblies, associations, processions, demonstrations or mass disturbances of social order;</li>
+<li>content that disseminates obscenity, pornography, gambling, violence, terrorism, or instigates criminal activity;</li>
+<li>content that insults or defames others, or infringes upon the lawful rights and interests of others;</li>
+<li>content that infringes upon portrait, name, reputation, privacy rights or other personal rights of others;</li>
+<li>content that uses abuse, insults, slander, intimidation, curses or other uncivilized language;</li>
+<li>content that conducts activities in the name of illegal civil organizations;</li>
+<li>content that infringes upon the copyrights, rights of communication through information networks or other lawful rights and interests of others;</li>
+<li>any other content prohibited by law or administrative regulations.</li>
+</ol>
+<p class="clause">3.4 Unless permitted by law or otherwise agreed in writing in advance by the Developer, you shall not engage in any of the following activities when using the Software and its services:</p>
+<ol>
+<li>deleting information about copyright from the Software or any copy thereof;</li>
+<li>reverse engineering, reverse assembling or reverse compiling the Software, or otherwise attempting to discover its source code;</li>
+<li>maliciously cracking, tampering with or attacking the Software, or threatening the stability of the product;</li>
+<li>using, renting, lending, copying, modifying, linking, reprinting, compiling, publishing or otherwise exploiting content in which the Developer owns intellectual property rights;</li>
+<li>adding to, deleting from or altering the functions or operating effects of the Software by modifying or forging instructions or data during its operation, or operating or distributing to the public the software or methods used for the above purposes, whether or not for commercial purposes;</li>
+<li>using the Software through third-party software, plug-ins, hacks or systems not developed or authorized by the Developer, or making, publishing or disseminating any such tool;</li>
+<li>interfering with the Software or its components, modules or data, whether by yourself or by authorizing another person or third-party software to do so;</li>
+<li>any other act not expressly authorized by the Developer.</li>
+</ol>
+<p class="clause">3.5 Unless permitted by law or otherwise agreed in writing in advance by the Developer, you shall not engage in any of the following activities when using the Software and its services:</p>
+<ol>
+<li>submitting or storing false or unlawful information, or impersonating or making use of another person's name;</li>
+<li>infringing upon the reputation, portrait, intellectual property, trade secrets or other lawful rights and interests of others;</li>
+<li>using the Software and its services for any illegal or criminal activity;</li>
+<li>making, publishing or operating or disseminating methods and tools related to the above conduct, whether or not for commercial purposes;</li>
+<li>any other act that violates laws and regulations, infringes upon the lawful rights and interests of other users, interferes with the normal operation of the product, or is not expressly authorized by the Developer.</li>
+</ol>
+<p class="clause">3.6 If you violate any provision of this Agreement, the Developer reserves the right, in order to maintain product security, to restrict or terminate your permission to use the Software, while also reserving the right to pursue legal liability against the responsible party under applicable law. The Developer shall bear no breach of contract or other legal liability to you as a result of such restriction measures.</p>
+<p class="clause">3.7 You shall independently bear legal responsibility for your conduct on AppLock. If your conduct fails to comply with this Agreement, the Developer reserves the right to cancel your service permissions immediately. If you store or disseminate unlawful or non-compliant information in AppLock, the relevant records may serve as evidence of your violation of law.</p>
+<p class="clause">3.8 The Developer shall not be liable for the loss, damage or inability to open photos, videos, documents or other files stored locally by the user. The Developer reserves the right to determine whether your conduct complies with the laws and regulations of the People's Republic of China and the requirements of this Agreement, and if you violate such laws, regulations or this Agreement, the Developer reserves the right to interrupt the provision of services to you.</p>
+
+<h2 id="en-4">4. Confidentiality and Privacy Protection</h2>
+<p class="clause">4.1 Unless otherwise provided in this Agreement, the Developer will not disclose or disseminate your information to third parties without your consent, and will adopt reasonable confidentiality measures to protect it. For details on the collection, use, storage, sharing and protection of personal information, please refer to the AppLock Privacy Policy.</p>
+<p class="clause">4.2 You understand and agree that, where information is leaked or lost due to causes other than the Developer's fault, such as loss or theft of your device, hacker attacks or device damage, the Developer shall not bear legal liability.</p>
+<p class="clause">4.3 The Developer shall no longer be bound by the confidentiality obligation in the following circumstances:</p>
+<ol>
+<li>your locally stored information becomes public for reasons other than those attributable to the Developer;</li>
+<li>disclosure is required by laws and regulations, or by administrative or judicial authorities or other competent bodies under law;</li>
+<li>authorization has been obtained from you in advance;</li>
+<li>it is necessary to investigate, prevent or address fraud, security or technical issues;</li>
+<li>it is necessary to perform the relevant service agreement or this policy, or to protect the public interest;</li>
+<li>it is for other reasonable and necessary purposes, such as protecting the personal or property safety or other lawful rights and interests of other users, the Developer or related personnel.</li>
+</ol>
+<p class="clause">4.4 Once you choose to use the Service, you acknowledge and accept the contents of the privacy policy related to the Service, as well as any updated version of the privacy policy that the Developer may publish from time to time.</p>
+
+<h2 id="en-5">5. Intellectual Property</h2>
+<p class="clause">5.1 The copyrights and other related rights in the Software (including all text, charts, user interfaces, visual interfaces, images, identifiers, sounds, artwork and computer code contained in the Software, together with the design, structure, selection, coordination, expression, "look and feel" and arrangement relating to the foregoing) belong to the Developer and are protected by copyright, trademark and/or other proprietary ownership laws.</p>
+<p class="clause">5.2 The Developer gives no warranty or undertaking as to the suitability of the Software or its conformity with your purposes, and shall not be liable to you or any third party in any form for delays, inaccuracies, errors or omissions in the Software or any text, graphics or other materials contained in it, or for any damages arising in the course of transmitting or delivering all or part of such materials, nor for any loss or damage arising therefrom.</p>
+<p class="clause">5.3 Provided that you comply with this Agreement, the Developer grants you a personal, non-exclusive, non-transferable and limited right to use the Software. You may install, use, display and run the Software on terminals owned by you. However, without the Developer's prior express written consent, you shall not copy, reproduce, reprint, upload, publish, publicly display, encode, translate, transmit or distribute any part or content of the Software to any other device, server, software or medium for publication, distribution or any other commercial purpose.</p>
+<p class="clause">5.4 All rights not expressly authorized by this Agreement remain with the Developer, and you must obtain the Developer's separate written permission before exercising them. The Developer's failure to exercise any of the foregoing rights shall not constitute a waiver of that right.</p>
+
+<h2 id="en-6">6. Disclaimer of Warranties</h2>
+<p class="clause">6.1 You expressly agree that all risks arising from your use of AppLock shall be borne entirely by you, and that all consequences arising from such use shall also be borne by you; <b>the Developer shall not be liable to you or to any third party</b>.</p>
+<p class="clause">6.2 The Developer does not warrant that the network services will necessarily meet your requirements, nor that the network services will not be interrupted, and makes no warranty or guarantee as to the timeliness, security or accuracy of the network services.</p>
+<p class="clause">6.3 The Developer shall not be liable for service interruptions or other defects caused by force majeure or reasons beyond the Developer's control, but will endeavour to reduce the losses and impact thereby caused to you.</p>
+<p class="clause">6.4 The Developer does not guarantee the absolute security of the private data you store locally. Where local private data is lost as a result of a forgotten password, device damage, system reinstallation, or uninstalling the App, the risk is borne by you, and you are advised to make your own backups.</p>
+<p class="clause">6.5 You agree that the Developer shall not be liable for the quality defects themselves of the following products or services provided by the Developer to you, nor for any losses thereby caused:</p>
+<ol>
+<li>the various functions provided free of charge by the Developer;</li>
+<li>unauthorized use or modification of local private materials stored by you;</li>
+<li>any other matters relating to AppLock.</li>
+</ol>
+
+<h2 id="en-7">7. Limitation of Liability</h2>
+<p>You expressly understand and agree that, for losses including but not limited to profits, reputation, app, data or other intangible losses arising on the following grounds, <b>the Developer shall not be liable for any direct, indirect, incidental, special, consequential or punitive damages, even if the Developer has been advised in advance of the possibility of such damages</b>:</p>
+<ol>
+<li>the use of, or inability to use, the Software and its services;</li>
+<li>unauthorized access to or alteration of your local private data;</li>
+<li>losses arising from your use of the Software in violation of this Agreement or applicable laws and regulations.</li>
+</ol>
+
+<h2 id="en-8">8. Modification or Termination of the Service</h2>
+<p>The Developer reserves the right to temporarily or permanently modify or terminate the service (or any part thereof) at any time. You agree that, for any modification, suspension or termination of the service, the Developer shall bear no liability whatsoever to you or to any third party.</p>
+
+<h2 id="en-9">9. Termination of Service and Breach Handling</h2>
+<p class="clause">9.1 You fully understand and agree that, where the Developer discovers, or receives a report or complaint from another party that you have violated applicable laws, regulations or this Agreement, the Developer may, based on the nature of your conduct, decide at its own discretion and without prior notice to take measures including but not limited to suspending or terminating the service, pursuing legal liability and claiming compensation for all losses. You understand that any violation of this Agreement by you may cause irreparable harm to the Developer, and you consent to the Developer obtaining the necessary remedies.</p>
+<p class="clause">9.2 You agree that the Developer may, at its own discretion and without prior notice, terminate your permission to access the Software for any of the following reasons, including without limitation:</p>
+<ol>
+<li>at the request of government departments and judicial authorities;</li>
+<li>suspension or material modification of the Software or any service provided thereby;</li>
+<li>unforeseeable technical problems.</li>
+</ol>
+<p class="clause">9.3 You fully understand and agree that the Developer may, based on reasonable judgment, handle conduct that violates applicable laws, regulations or this Agreement, take appropriate legal action and measures against your unlawful conduct, and retain relevant information and report to the competent authorities in accordance with applicable law, and you shall bear all legal liability arising therefrom.</p>
+<p class="clause">9.4 In respect of any penalty, judgment, settlement, request, loss, liability, claim or cost arising from or in connection with your use of the Software in violation of laws, regulations or this Agreement, and asserted against the Developer by administrative agencies, judicial authorities or any third party, you agree to indemnify the Developer against all losses and to hold the Developer harmless.</p>
+<p class="clause">9.5 Any measures the Developer takes against you pursuant to the foregoing remedies shall not render the Developer liable for any breach of contract or any other form of liability. After the Developer chooses to terminate this Agreement or stop providing the service, the Developer is under no obligation to retain any information other than that stored locally.</p>
+
+<h2 id="en-10">10. Governing Law and Jurisdiction</h2>
+<p class="clause">10.1 The effectiveness, performance, interpretation and resolution of disputes under this Service Agreement shall be governed by the laws of the People's Republic of China.</p>
+<p class="clause">10.2 Any dispute arising from the content of this Agreement or its enforcement shall be resolved through friendly consultation where possible; failing such resolution, the parties agree unanimously to submit the dispute to the people's court with jurisdiction over the Developer's place of residence.</p>
+
+<h2 id="en-11">11. Miscellaneous</h2>
+<p class="clause">11.1 If you have any enquiries, comments or suggestions in the course of using AppLock, you may contact us by email: <a href="mailto:chenzhengsoft@outlook.com"><b>chenzhengsoft@outlook.com</b></a>. The Developer will respond within a reasonable period, provided that the obligation to answer shall not exceed a reasonably bearable limit.</p>
+<p class="clause">11.2 If any provision of this Agreement is wholly or partially invalid or unenforceable for any reason, the remaining provisions shall remain valid and binding.</p>
+<p class="clause">11.3 The Software and its services are intended for use within the territory of China only. If you use them in any region outside China without authorization, the Developer shall not bear any liability arising therefrom.</p>
+<p class="clause">11.4 This Agreement takes effect from the date you download, install and use the Software, and remains in force unless the Developer terminates this Agreement or you cease using the Software. Termination of this Agreement does not release you from the obligations and responsibilities you assume under this Agreement or any other related agreement or rule.</p>
+</section>
+
+</main>
+<footer>
+  <span>© <span id="yr">2026</span> chenzhengsoft · 应用锁 AppLock</span>
+  <span><a href="/">首页</a> · <a href="/privacy.html">隐私政策 / Privacy Policy</a></span>
+</footer>
+<script>
+(function(){
+  var docs=document.querySelectorAll('.doc');
+  var langA=document.querySelectorAll('#langSeg a');
+  var cur=null;
+  function langOf(hash){
+    var h=(hash||'').replace(/^#/,'');
+    if(h.indexOf('en')===0) return 'en';
+    if(h.indexOf('zh')===0) return 'zh';
+    return null;
+  }
+  function apply(scrollTop){
+    var h=(location.hash||'').replace(/^#/,'');
+    var l=langOf(h);
+    if(!l){ l='zh'; history.replaceState(null,'','#zh'); h='zh'; }
+    if(cur!==l){
+      docs.forEach(function(d){ d.classList.toggle('on', d.getAttribute('data-doc')===l); });
+      langA.forEach(function(a){ a.classList.toggle('on', a.dataset.lang===l); });
+      document.documentElement.lang = (l==='zh')?'zh-CN':'en';
+      document.title = (l==='zh'?'《应用锁》用户协议':'AppLock User Agreement')+' · 应用锁 AppLock';
+      cur=l;
+      if(scrollTop) window.scrollTo(0,0);
+    }
+  }
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  window.addEventListener('hashchange',function(){ apply(true); });
+  apply(false);
+  window.scrollTo(0,0);
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
