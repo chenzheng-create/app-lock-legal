@@ -1,0 +1,656 @@
+<!DOCTYPE html><html lang="zh-TW" class="dark scroll-smooth" style="min-height: 100%; position: relative"><head>
+<meta charset="utf-8">
+<link href="./favicon.ico" rel="icon" sizes="any">
+<link href="./assets/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+<link href="./assets/favicon-16.png" rel="icon" type="image/png" sizes="16x16">
+<link href="./assets/favicon-512.png" rel="apple-touch-icon">
+<meta content="AppLock 隱藏並鎖定你的應用，可偽裝成真實計算機，並以 AES-256 在本地加密照片、影片、通訊錄與備忘錄。100% 離線，零廣告。" name="description">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AppLock - 毫秒級隱私防護，極致隱蔽保險箱</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#262a33",
+            "surface-container-lowest": "#0a0e16",
+            "on-tertiary": "#00354a",
+            "on-tertiary-fixed-variant": "#004c69",
+            "primary-fixed": "#b6ebff",
+            "surface-variant": "#31353e",
+            "on-tertiary-container": "#005575",
+            "primary-container": "#00d2ff",
+            "tertiary-container": "#6bccff",
+            "on-background": "#dfe2ee",
+            "background": "#0f131c",
+            "surface-tint": "#47d6ff",
+            "surface-container-highest": "#31353e",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "primary": "#a5e7ff",
+            "outline": "#859399",
+            "on-error": "#690005",
+            "on-primary-fixed": "#001f28",
+            "on-surface": "#dfe2ee",
+            "primary-fixed-dim": "#47d6ff",
+            "on-secondary": "#3c0091",
+            "secondary": "#d0bcff",
+            "tertiary-fixed": "#c4e7ff",
+            "surface": "#0f131c",
+            "tertiary": "#b8e3ff",
+            "secondary-fixed": "#e9ddff",
+            "inverse-surface": "#dfe2ee",
+            "surface-container": "#1c2028",
+            "on-primary-fixed-variant": "#004e60",
+            "outline-variant": "#3c494e",
+            "on-tertiary-fixed": "#001e2c",
+            "error": "#ffb4ab",
+            "on-secondary-fixed": "#23005c",
+            "secondary-fixed-dim": "#d0bcff",
+            "on-primary": "#003543",
+            "surface-container-low": "#181c24",
+            "error-container": "#93000a",
+            "on-secondary-container": "#c4abff",
+            "on-error-container": "#ffdad6",
+            "inverse-primary": "#00677f",
+            "on-secondary-fixed-variant": "#5516be",
+            "surface-dim": "#0f131c",
+            "on-surface-variant": "#bbc9cf",
+            "inverse-on-surface": "#2c3039",
+            "surface-bright": "#353942",
+            "secondary-container": "#571bc1",
+            "on-primary-container": "#00566a"
+          },
+          fontFamily: {
+            sans: ["Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- TOP NAVIGATION HEADER -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 h-16 flex items-center justify-end px-4 sm:px-6 lg:px-8 bg-[#0a0e16]/80 backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="relative"><button id="lang-toggle" type="button" class="inline-flex items-center gap-2 pl-3 pr-2.5 py-2 rounded-full bg-white/[0.06] border border-white/10 text-sm text-slate-200 hover:bg-white/[0.12] transition-colors" aria-haspopup="true" aria-expanded="false"><span class="material-symbols-outlined text-lg leading-none">language</span><span class="font-medium">繁體中文</span><span class="material-symbols-outlined text-lg leading-none">expand_more</span></button><div id="lang-menu" class="hidden absolute right-0 top-full mt-2 w-40 rounded-xl bg-[#111725]/95 backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden py-1"><a class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm transition-colors text-slate-300 hover:bg-white/[0.06] hover:text-white" href="index.html"><span>English</span></a><a class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm transition-colors text-slate-300 hover:bg-white/[0.06] hover:text-white" href="index.zh-CN.html"><span>简体中文</span></a><a class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm transition-colors bg-primary/10 text-primary font-semibold" href="index.zh-TW.html" aria-current="true"><span>繁體中文</span><span class="material-symbols-outlined text-base">check</span></a></div></div>
+</header>
+<main class="w-full pt-20">
+<!-- ========================================== -->
+<!-- 1. HERO SECTION                            -->
+<!-- ========================================== -->
+<section class="relative w-full overflow-hidden pt-12 pb-24 lg:pt-16 lg:pb-32 bg-gradient-to-b from-[#0a0e16] via-surface to-[#0a0e16]">
+<!-- Background Ambient Glow Blobs -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 w-[1100px] h-[550px] bg-gradient-to-b from-primary-container/15 via-secondary-container/10 to-transparent blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 right-10 w-96 h-96 bg-secondary/10 blur-[120px] pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[580px]">
+<!-- Left Column -->
+<div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left z-10">
+<!-- Big Impact Title -->
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-[1.15]">
+<span class="text-white">AppLock</span>
+<span class="block text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-container via-tertiary-fixed-dim to-secondary bg-clip-text text-transparent mt-2">應用與照片加密 · 守護你的絕對隱私</span>
+</h1>
+<!-- Clean 3-Line Sub-description -->
+<div class="text-base sm:text-lg text-slate-300 font-normal mb-10 space-y-2 leading-relaxed max-w-xl text-left">
+<p>擔心他人窺視、照片或影片外洩，或是手機突然被檢查？</p>
+<p>毫秒級隱身 + 硬體級加密，全方位守護裝置隱私。</p>
+<p>簡單、快速，無需複雜設定，即刻開啟防護。</p>
+</div>
+<!-- Prominent Hero CTA Button -->
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-3.5 px-9 py-4 rounded-xl bg-gradient-to-r from-primary-container via-[#47d6ff] to-primary text-[#003543] font-extrabold text-lg sm:text-xl shadow-[0_0_35px_rgba(0,210,255,0.6)] hover:shadow-[0_0_50px_rgba(0,210,255,0.85)] hover:-translate-y-0.5 transition-all" href="https://apps.apple.com/us/app/id6836619776" target="_blank" rel="noopener">
+<span class="material-symbols-outlined text-2xl sm:text-3xl font-black">download</span>
+<span>免費下載</span>
+</a>
+</div>
+<!-- Bottom Auxiliary Details Line -->
+<div class="flex items-center gap-2 text-xs sm:text-sm text-outline mt-2">
+<span class="text-primary font-medium">支援 iOS 16.0 以上版本</span>
+</div>
+</div>
+<!-- Right Column -->
+<div class="lg:col-span-7 relative flex items-center justify-center lg:justify-end"><div class="relative w-full flex items-center justify-center lg:justify-end"><div class="absolute -inset-4 bg-gradient-to-tr from-primary-container/20 via-secondary-container/20 to-primary/10 rounded-full blur-[100px] pointer-events-none -z-10"></div><div class="absolute inset-0 rounded-3xl bg-radial from-primary-container/15 via-transparent to-transparent blur-[70px] pointer-events-none -z-10"></div><div class="relative z-10 p-2 sm:p-3 rounded-3xl bg-gradient-to-b from-white/[0.08] via-transparent to-transparent border border-white/[0.08] shadow-[0_0_50px_-10px_rgba(0,210,255,0.2)]"><img alt="CipherLock 介面預覽" class="w-full max-w-xl h-auto object-contain rounded-2xl transition-transform hover:scale-[1.01] duration-300 drop-shadow-[0_24px_60px_rgba(0,0,0,0.9)]" src="./assets/hero.png" style="image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; -webkit-mask-image: radial-gradient(ellipse 95% 95% at 50% 50%, black 75%, transparent 100%); mask-image: radial-gradient(ellipse 95% 95% at 50% 50%, black 75%, transparent 100%);"></div></div></div>
+</div></div>
+</section>
+<!-- ========================================== -->
+<!-- 2. TROUBLES SECTION                        -->
+<!-- ========================================== -->
+<section class="w-full bg-[#0a0e16] py-24 border-t border-white/[0.05]" id="troubles">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            你是否也遇過這些問題？
+          </h2>
+<p class="text-base text-on-surface-variant mt-3">
+            在日常生活與人際交往中，最敏感的個人資訊與數位資產常常在無意間暴露。
+          </p>
+</div>
+<!-- 6 Pain Points Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="p-7 rounded-2xl bg-surface-container-low/80 border border-white/[0.07] hover:border-error/40 hover:bg-surface-container transition-all group relative overflow-hidden shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-error/10 border border-error/20 flex items-center justify-center text-error mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">supervisor_account</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-error transition-colors">害怕手機被人翻看</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              把手機交給家人朋友時，總擔心聊天記錄和私密相簿被人隨手翻看。
+            </p>
+</div>
+<!-- Card 2 -->
+<div class="p-7 rounded-2xl bg-surface-container-low/80 border border-white/[0.07] hover:border-error/40 hover:bg-surface-container transition-all group relative overflow-hidden shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-error/10 border border-error/20 flex items-center justify-center text-error mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">cloud_off</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-error transition-colors">照片意外外洩</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              雲端同步或送修裝置，都會讓私密照片與敏感工作檔案陷入風險。
+            </p>
+</div>
+<!-- Card 3 -->
+<div class="p-7 rounded-2xl bg-surface-container-low/80 border border-white/[0.07] hover:border-error/40 hover:bg-surface-container transition-all group relative overflow-hidden shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-error/10 border border-error/20 flex items-center justify-center text-error mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">directions_run</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-error transition-colors">面對突擊檢查束手無策</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              有人突然瞥見你的螢幕，匆忙退出隱私應用反而顯得可疑，徒增尷尬。
+            </p>
+</div>
+<!-- Card 4 -->
+<div class="p-7 rounded-2xl bg-surface-container-low/80 border border-white/[0.07] hover:border-error/40 hover:bg-surface-container transition-all group relative overflow-hidden shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-error/10 border border-error/20 flex items-center justify-center text-error mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">no_photography</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-error transition-colors">偷窺無憑據</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              懷疑有人趁你不在時試圖解鎖手機，卻缺乏確鑿的影像證據，只能心裡沒底。
+            </p>
+</div>
+<!-- Card 5 -->
+<div class="p-7 rounded-2xl bg-surface-container-low/80 border border-white/[0.07] hover:border-error/40 hover:bg-surface-container transition-all group relative overflow-hidden shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-error/10 border border-error/20 flex items-center justify-center text-error mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">delete_forever</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-error transition-colors">隱私應用一刪了之</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              不懷好意的人長按即可刪除隱私應用，讓你的防護形同虛設。
+            </p>
+</div>
+<!-- Card 6 -->
+<div class="p-7 rounded-2xl bg-surface-container-low/80 border border-white/[0.07] hover:border-error/40 hover:bg-surface-container transition-all group relative overflow-hidden shadow-lg">
+<div class="w-12 h-12 rounded-xl bg-error/10 border border-error/20 flex items-center justify-center text-error mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">restore_from_trash</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-error transition-colors">刪除後仍有殘留</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+              即便刪掉照片，系統「最近刪除」相簿仍留有痕跡，手動清理既麻煩又有風險。
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 3. ADVANTAGES SECTION                      -->
+<!-- ========================================== -->
+<section class="w-full bg-surface py-24 border-t border-white/[0.05]" id="advantages">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            為什麼選擇我們？
+          </h2>
+<p class="text-base text-on-surface-variant mt-3">
+            告別繁瑣的傳統鎖定螢幕，把銀行級安全控制交到每個人手中。
+          </p>
+</div>
+<!-- 4 Core Advantage Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Adv 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06] hover:border-primary-container/50 hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container/15 text-primary-container flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">cloud_off</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">純本地 零雲端儲存</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                無需連網權限。完全本地的 AES-256 硬體沙盒儲存，資料絕不上傳任何遠端伺服器。
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-medium text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>100% 離線沙盒隔離</span>
+</div>
+</div>
+<!-- Adv 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06] hover:border-secondary/50 hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">touch_app</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-secondary transition-colors">零門檻設定</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                純淨直觀的介面。一秒應用鎖與檔案隱藏，沒有任何讓人困惑的設定或技術門檻。
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-medium text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span>1 秒極速隱身</span>
+</div>
+</div>
+<!-- Adv 3 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06] hover:border-tertiary-fixed-dim/50 hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 text-tertiary-fixed-dim flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">masks</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-tertiary-fixed-dim transition-colors">擬真級防偵測偽裝</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                忠實還原真實計算機與備忘錄功能。外人看來完全平常，無從察覺。
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-medium text-tertiary-fixed-dim flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">visibility_off</span>
+<span>雙層功能蒙版</span>
+</div>
+</div>
+<!-- Adv 4 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06] hover:border-primary-fixed/50 hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/15 text-primary-fixed flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl">cleaning_services</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2 group-hover:text-primary-fixed transition-colors">純淨無廣告</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                無開屏廣告、無打擾彈窗。極致輕量、省電，不背景喚醒，只為徹底安心。
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-medium text-primary-fixed flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span>專注安全本身</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 4. DEEP FEATURES SECTION                   -->
+<!-- ========================================== -->
+<section class="w-full bg-[#0a0e16] py-24 border-t border-white/[0.05]" id="features">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto mb-20">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            核心功能 · 密不透風的安全閉環
+          </h2>
+<p class="text-base text-on-surface-variant mt-3">
+            遠不止一把鎖——從偽裝、隱藏到資料徹底銷毀，全鏈路防禦。
+          </p>
+</div>
+<div class="space-y-16">
+<!-- Feature Block 1 -->
+<div class="rounded-3xl bg-surface-container-low border border-white/[0.07] p-8 lg:p-12 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Content -->
+<div class="lg:col-span-6 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-wider mb-3">
+<span class="material-symbols-outlined text-base">lock_clock</span>
+<span>核心功能 01</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
+                  即時隱藏與上鎖 · 桌面無痕
+                </h3>
+<p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">徹底杜絕窺視，毫秒級回應，讓窺探焦慮說再見。</p>
+<!-- Sub-features -->
+<div class="space-y-3.5 mb-8"><div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">lock</span><div><h4 class="text-sm font-bold text-white">&nbsp;隱藏應用與應用鎖</h4><p class="text-xs text-on-surface-variant mt-0.5">毫秒級隱身與啟動鎖，桌面完全無痕，無懼窺探。</p></div></div><div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">screen_rotation</span><div><h4 class="text-sm font-bold text-white">&nbsp;翻轉隱藏與快速離開</h4><p class="text-xs text-on-surface-variant mt-0.5">突發狀況時將手機翻面朝下，立即息屏鎖定或偽裝離開。</p></div></div><div class="flex items-start gap-3"><span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">shield</span><div><h4 class="text-sm font-bold text-white">防止應用被移除</h4><p class="text-xs text-on-surface-variant mt-0.5">系統級防移除安全防護，防止未授權刪除或繞過嘗試。</p></div></div></div>
+<div>
+</div>
+</div>
+<!-- Visual Showcase Box -->
+<div class="lg:col-span-6"><div class="relative rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-surface-container group"><div class="absolute -inset-4 bg-primary-container/20 rounded-2xl blur-[70px] pointer-events-none -z-10"></div><img alt="即時隱藏與上鎖 · 桌面無痕" class="w-full h-auto object-cover rounded-2xl transition-transform duration-300 hover:scale-[1.01]" src="./assets/feature-01.jpg" style="mask-image: radial-gradient(92% 90%, black 72%, transparent 100%);"></div></div>
+</div>
+</div>
+<!-- Feature Block 2 -->
+<div class="rounded-3xl bg-surface-container-low border border-white/[0.07] p-8 lg:p-12 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Visual Showcase Box -->
+<div class="lg:col-span-6 order-2 lg:order-1"><div class="relative rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-surface-container group"><div class="absolute -inset-4 bg-gradient-to-tr from-secondary/20 to-primary-container/20 rounded-2xl blur-[70px] pointer-events-none -z-10"></div><img alt="多維偽裝 · 計算機功能偽裝" class="w-full h-auto object-cover rounded-2xl transition-transform duration-300 hover:scale-[1.01]" src="./assets/feature-02.jpg" style="mask-image: radial-gradient(92% 90%, black 72%, transparent 100%);"></div></div>
+<!-- Content -->
+<div class="lg:col-span-6 order-1 lg:order-2 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-xs font-semibold text-secondary uppercase tracking-wider mb-3">
+<span class="material-symbols-outlined text-base">masks</span>
+<span>核心功能 02</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
+                  多維偽裝 · 計算機功能偽裝
+                </h3>
+<p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">外觀偽裝完美，真實逼真難以分辨。</p>
+<!-- Sub-features -->
+<div class="space-y-3.5 mb-8"><div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">masks</span><div><h4 class="text-sm font-bold text-white">應用偽裝（圖示與名稱替換）</h4><p class="text-xs text-on-surface-variant mt-0.5">無縫變身為可正常使用的計算機或備忘錄，外觀與互動都真實可信。</p></div></div><div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">photo_camera</span><div><h4 class="text-sm font-bold text-white">入侵者自拍留存</h4><p class="text-xs text-on-surface-variant mt-0.5">密碼輸錯時靜默抓拍窺探者顏面與時間戳，留存確鑿證據。</p></div></div><div class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">fingerprint</span><div><h4 class="text-sm font-bold text-white">Face ID 與雙密碼系統</h4><p class="text-xs text-on-surface-variant mt-0.5">生物辨識認證結合虛擬與真實密碼，兼顧防脅迫的安全體驗。</p></div></div></div>
+<div>
+</div>
+</div>
+</div>
+</div>
+<!-- Feature Block 3 -->
+<div class="rounded-3xl bg-surface-container-low border border-white/[0.07] p-8 lg:p-12 shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Content -->
+<div class="lg:col-span-6 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 text-xs font-semibold text-tertiary-fixed-dim uppercase tracking-wider mb-3">
+<span class="material-symbols-outlined text-base">folder_special</span>
+<span>核心功能 03</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-4">
+                  加密隱私保險箱 · 全生命週期銷毀
+                </h3>
+<p class="text-sm sm:text-base text-on-surface-variant mb-6 leading-relaxed">私密照片、影片與文件，以 AES-256 硬體級加密隔離。</p>
+<!-- Sub-features -->
+<div class="space-y-3.5 mb-8"><div class="flex items-start gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-xl shrink-0 mt-0.5">folder_special</span><div><h4 class="text-sm font-bold text-white">檔案隱藏（照片 / 影片 / 通訊錄 / 備忘錄）</h4><p class="text-xs text-on-surface-variant mt-0.5">機密照片、影片、私人通訊錄與日常備忘，與未授權存取徹底隔離。</p></div></div><div class="flex items-start gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-xl shrink-0 mt-0.5">auto_delete</span><div><h4 class="text-sm font-bold text-white">匯入時自動刪除原檔案</h4><p class="text-xs text-on-surface-variant mt-0.5">可選擇在匯入後清除系統相簿與「最近刪除」中的原檔案，不留痕跡。</p></div></div><div class="flex items-start gap-3"><span class="material-symbols-outlined text-tertiary-fixed-dim text-xl shrink-0 mt-0.5">enhanced_encryption</span><div><h4 class="text-sm font-bold text-white">AES-256 硬體隔離沙盒</h4><p class="text-xs text-on-surface-variant mt-0.5">純本地硬體級沙盒隔離，零雲端上傳，打造不可逆的防護。</p></div></div></div>
+<div>
+</div>
+</div>
+<!-- Visual Showcase Box -->
+<div class="lg:col-span-6"><div class="relative rounded-2xl border border-white/10 overflow-hidden shadow-2xl bg-surface-container group"><div class="absolute -inset-4 bg-tertiary-container/20 rounded-2xl blur-[70px] pointer-events-none -z-10"></div><img alt="加密隱私保險箱 · 全生命週期銷毀" class="w-full h-auto object-cover rounded-2xl transition-transform duration-300 hover:scale-[1.01]" src="./assets/feature-03.jpg" style="mask-image: radial-gradient(92% 90%, black 72%, transparent 100%);"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 6. USER REVIEWS SECTION                    -->
+<!-- ========================================== -->
+<section class="w-full bg-[#0a0e16] py-24 border-t border-white/[0.05]" id="reviews">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            使用者怎麼說
+          </h2>
+<p class="text-base text-on-surface-variant mt-3">
+            聽聽來自全球 AppLock 使用者的真實體驗與安全回饋。
+          </p>
+</div>
+<!-- 6 Review Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Review 1: Austin T. -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.07] hover:border-primary-container/40 transition-all flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary-container to-secondary-container flex items-center justify-center font-bold text-white text-sm">
+                    A
+                  </div>
+<div>
+<h4 class="text-sm font-bold text-white">Austin T.</h4>
+<span class="text-[10px] text-outline">認證使用者 · iPhone 15 Pro</span>
+</div>
+</div>
+<!-- 5 Stars -->
+<div class="flex text-amber-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-200 leading-relaxed font-normal">
+                「偽裝成計算機這個點子太妙了！居然真的能算數學題。從來沒人懷疑它存著私密資料，簡直是救命神物！」
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between text-[11px] text-outline">
+<span>功能：應用偽裝</span>
+<span class="text-primary font-medium">認證評價</span>
+</div>
+</div>
+<!-- Review 2: Marcus R. -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.07] hover:border-primary-container/40 transition-all flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary to-primary-fixed flex items-center justify-center font-bold text-[#0a0e16] text-sm">
+                    M
+                  </div>
+<div>
+<h4 class="text-sm font-bold text-white">Marcus R.</h4>
+<span class="text-[10px] text-outline">認證使用者 · iPhone 14 Plus</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-200 leading-relaxed font-normal">
+                「翻轉隱藏已經救了我好幾次！有人突然靠近時，把手機翻面朝下就立刻息屏。」
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between text-[11px] text-outline">
+<span>功能：翻轉隱身離開</span>
+<span class="text-primary font-medium">認證評價</span>
+</div>
+</div>
+<!-- Review 3: Sarah K. -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.07] hover:border-primary-container/40 transition-all flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-tertiary-container to-secondary-container flex items-center justify-center font-bold text-white text-sm">
+                    S
+                  </div>
+<div>
+<h4 class="text-sm font-bold text-white">Sarah K.</h4>
+<span class="text-[10px] text-outline">認證使用者 · iPhone 13 Pro</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-200 leading-relaxed font-normal">
+                「從系統照片和「最近刪除」裡自動銷毀原檔案，讓我徹底安心。不留殘渣，零痕跡，實實在在五星好評！」
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between text-[11px] text-outline">
+<span>功能：自動銷毀</span>
+<span class="text-primary font-medium">認證評價</span>
+</div>
+</div>
+<!-- Review 4: David C. -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.07] hover:border-primary-container/40 transition-all flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary-container to-tertiary flex items-center justify-center font-bold text-[#0a0e16] text-sm">
+                    D
+                  </div>
+<div>
+<h4 class="text-sm font-bold text-white">David C.</h4>
+<span class="text-[10px] text-outline">認證使用者 · iPhone 15</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-200 leading-relaxed font-normal">
+                「設計非常俐落，沒有惱人廣告，Face ID 一按即開。這才是專業隱私工具該有的樣子。」
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between text-[11px] text-outline">
+<span>功能：純淨無廣告</span>
+<span class="text-primary font-medium">認證評價</span>
+</div>
+</div>
+<!-- Review 5: Lucas W. -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.07] hover:border-primary-container/40 transition-all flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-secondary-container to-secondary flex items-center justify-center font-bold text-white text-sm">
+                    L
+                  </div>
+<div>
+<h4 class="text-sm font-bold text-white">Lucas W.</h4>
+<span class="text-[10px] text-outline">認證使用者 · iPhone 15 Pro Max</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-200 leading-relaxed font-normal">
+                「在這裡保管機密筆記和客戶檔案毫無負擔。而且靜音抓拍立刻拍下了愛窺探的同事！」
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between text-[11px] text-outline">
+<span>功能：入侵抓拍</span>
+<span class="text-primary font-medium">認證評價</span>
+</div>
+</div>
+<!-- Review 6: Emily F. -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.07] hover:border-primary-container/40 transition-all flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary-container flex items-center justify-center font-bold text-white text-sm">
+                    E
+                  </div>
+<div>
+<h4 class="text-sm font-bold text-white">Emily F.</h4>
+<span class="text-[10px] text-outline">認證使用者 · iPhone 12 Pro Max</span>
+</div>
+</div>
+<div class="flex text-amber-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star</span>
+</div>
+</div>
+<p class="text-sm text-slate-200 leading-relaxed font-normal">
+                「用了八個多月，穩定性無可挑剔！防移除功能讓我無論誰拿到手機都能保持安全。」
+              </p>
+</div>
+<div class="mt-4 pt-3 border-t border-white/[0.05] flex items-center justify-between text-[11px] text-outline">
+<span>功能：防移除</span>
+<span class="text-primary font-medium">認證評價</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 7. FAQ SECTION                             -->
+<!-- ========================================== -->
+<section class="w-full bg-surface py-24 border-t border-white/[0.05]" id="faq">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">常見問題</h2>
+<p class="text-sm sm:text-base text-on-surface-variant mt-2">深入了解安全架構、加密方式與隱身功能</p>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06]">
+<button class="w-full flex items-center justify-between text-left group" onclick="toggleFaq(1)">
+<span class="text-base sm:text-lg font-bold text-white group-hover:text-primary transition-colors">
+                匯入的檔案會被上傳到開發者伺服器嗎？
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" id="faq-icon-1">expand_more</span>
+</button>
+<div class="mt-4 pt-4 border-t border-white/[0.06] text-sm text-on-surface-variant leading-relaxed hidden" id="faq-ans-1">
+              絕對不會。AppLock 採用 100% 離線沙盒架構，不申請任何連網權限。所有照片、影片與機密文件均在你的裝置本地以 AES-256 標準結合 iOS Secure Enclave 硬體加密，開發者與第三方都無法取得你的資料。
+            </div>
+</div>
+<!-- FAQ 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06]">
+<button class="w-full flex items-center justify-between text-left group" onclick="toggleFaq(2)">
+<span class="text-base sm:text-lg font-bold text-white group-hover:text-primary transition-colors">
+                如果忘記密碼，有重置機制嗎？
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" id="faq-icon-2">expand_more</span>
+</button>
+<div class="mt-4 pt-4 border-t border-white/[0.06] text-sm text-on-surface-variant leading-relaxed hidden" id="faq-ans-2">
+              為堅守安全底線、杜絕後門設計，主密碼憑證絕不儲存在任何伺服器。若已開啟 Face ID，可隨時透過生物辨識驗證來重設備用密碼。若無生物辨識或主密碼，任何人都無法繞過或復原加密保險箱。
+            </div>
+</div>
+<!-- FAQ 3 -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-white/[0.06]">
+<button class="w-full flex items-center justify-between text-left group" onclick="toggleFaq(3)">
+<span class="text-base sm:text-lg font-bold text-white group-hover:text-primary transition-colors">
+                偽裝成計算機時，它真的能算數嗎？
+              </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-transform" id="faq-icon-3">expand_more</span>
+</button>
+<div class="mt-4 pt-4 border-t border-white/[0.06] text-sm text-on-surface-variant leading-relaxed hidden" id="faq-ans-3">
+              是的，完全可以。它就是一個可完整互動的標準計算機。任何人借到你的手機都能正常算術而不露破綻。只有輸入你專屬的密鑰組合，才會解鎖進入私密保險箱。
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 8. FINAL DOWNLOAD HERO CTA SECTION         -->
+<!-- ========================================== -->
+<section class="w-full bg-[#0a0e16] py-24 border-t border-white/[0.05]" id="download">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="rounded-3xl bg-gradient-to-br from-surface-container-high via-surface-container-low to-surface-container-highest border border-white/10 p-8 sm:p-14 shadow-2xl relative overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/20 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-96 h-96 bg-secondary-container/20 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center justify-center text-center gap-8 w-full"><div class="text-center mx-auto max-w-4xl"><h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">今天就築起密不透風的隱私防線</h2><div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"><a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary-container via-primary-fixed-dim to-secondary text-on-primary font-bold text-base shadow-[0_0_32px_rgba(0,210,255,0.5)] hover:shadow-[0_0_48px_rgba(0,210,255,0.7)] hover:-translate-y-0.5 transition-all" href="https://apps.apple.com/us/app/id6836619776" target="_blank" rel="noopener"><svg class="w-5 h-5 fill-current" viewBox="0 0 170 170"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.6-7.85-11.75-14.42-6.53-10.4-11.53-22.3-15.01-35.71-3.48-13.41-5.22-25.75-5.22-37.03 0-14.73 3.65-27.14 10.96-37.23 7.3-10.08 16.63-15.22 27.99-15.42 5.11 0 10.55 1.34 16.32 4.02 5.76 2.68 9.53 4.07 11.29 4.16 1.41 0 5.48-1.52 12.22-4.57 6.74-3.04 12.59-4.36 17.56-3.95 13.88.8 24.88 5.75 33 14.86-12.18 7.39-18.15 17.51-17.91 30.36.24 10.04 4.09 18.57 11.55 25.59 7.46 7.02 16.35 10.97 26.68 11.84-2.22 6.83-4.91 13.85-8.07 21.05zM119.22 33.15c0-7.39 2.65-14.38 7.95-20.97 5.3-6.59 11.77-10.98 19.41-13.18.23 1.25.35 2.45.35 3.61 0 7.33-2.73 14.51-8.19 21.54-5.46 7.03-12.02 11.41-19.68 13.14-.08-1.39-.14-2.77-.14-4.14z"></path></svg><span>在 App Store 免費下載</span></a></div><p class="text-xs text-outline mt-4">相容 iOS 16.0 以上版本</p></div></div></div>
+</div>
+</section>
+</main>
+<!-- ========================================== -->
+<!-- 9. FOOTER SECTION                          -->
+<!-- ========================================== -->
+<footer class="w-full bg-[#070a10] border-t border-white/[0.05] py-8 text-center text-xs text-outline">
+
+</footer>
+<!-- Interactivity Script -->
+<script>
+    function toggleFaq(index) {
+      const ans = document.getElementById('faq-ans-' + index);
+      const icon = document.getElementById('faq-icon-' + index);
+      if (ans.classList.contains('hidden')) {
+        ans.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        ans.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+
+
+<script>function langToggleInit(){var b=document.getElementById('lang-toggle'),m=document.getElementById('lang-menu');if(!b||!m)return;b.addEventListener('click',function(e){e.stopPropagation();m.classList.toggle('hidden');});m.addEventListener('click',function(e){e.stopPropagation();});document.addEventListener('click',function(){m.classList.add('hidden');});}langToggleInit();</script>
+</body></html>
